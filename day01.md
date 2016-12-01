@@ -82,3 +82,4 @@ print(10 % 4) # R 語言使用 10 %% 4
 
 - [Installing Jupyter](http://jupyter.org/install.html)
 - [Download Anaconda Now!](https://www.continuum.io/downloads)
+- [Issue #1716 jupyter/notebook](https://github.com/jupyter/notebook/issues/1716)

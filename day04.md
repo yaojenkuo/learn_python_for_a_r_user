@@ -33,7 +33,7 @@ R 語言基本的資料結構大致有五類：
 - data frame
 - list
 
-我們可以透過使用 `factor()`，`matrix()`，`data.frame()`，`list()` 這些函數將原為**vector**結構的 `ironman_groups` 轉換為不同的資料結構。
+我們可以透過使用 `factor()`，`matrix()`，`data.frame()`，`list()` 這些函數將原為 **vector** 結構的 `ironman_groups` 轉換為不同的資料結構。
 
 ```{r}
 ironman_groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")

@@ -174,7 +174,7 @@ my_status <- list(
 )
 
 # 利用名稱選擇元素
-my_status[["group]]
+my_status[["group"]]
 my_status[["ttl_articles"]]
 my_status[["is_participating"]]
 ```

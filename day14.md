@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 14 天] 常用屬性或方法（3）
+# [第 14 天] 常用屬性或方法（3）Data Frame
 
 ---
 
-除了 Python 基本的資料結構（list，tuple 與 dictionary）以及昨天學習筆記提到的 ndarray，還記得我們在 [[R 語言使用者的 Python 學習筆記 - 第 05 天] 資料結構（3）](http://ithelp.ithome.com.tw/articles/10185182)提到，為了讓 Python 也能夠使用類似 R 語言的 data frame 資料結構而使用了 `pandas` 套件的 data frame 嗎？我們勢必也要瞭解她常見的屬性或方法。
+除了 Python 基本的資料結構（list，tuple 與 dictionary）以及昨天學習筆記提到的 ndarray，還記得我們在 [[第 05 天] 資料結構（2）ndarray](http://ithelp.ithome.com.tw/articles/10185182) 提到，為了讓 Python 也能夠使用類似 R 語言的 data frame 資料結構而使用了 `pandas` 套件的 data frame 嗎？我們勢必也要瞭解她常見的屬性或方法。
 
 ## Pandas 與 data frame 的常用屬性或方法
 
@@ -90,9 +90,9 @@ print(ironmen_df_no_groups)
 
 ![day1403](https://storage.googleapis.com/2017_ithome_ironman/day1403.png)
 
-### 透過 `ix` 方法篩選 data frame
+### 透過 `ix` 屬性篩選 data frame
 
-我們可以透過 `ix` 方法（利用索引值）篩選 data frame。
+我們可以透過 `ix` 屬性（利用索引值）篩選 data frame。
 
 ```python
 import pandas as pd

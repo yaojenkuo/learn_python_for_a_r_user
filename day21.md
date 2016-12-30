@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 21 天] 機器學習
+# [第 21 天] 機器學習 玩具資料與線性迴歸
 
 ---
 
-我們在 [[R 語言使用者的 Python 學習筆記 - 第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)提過，資料角力的目的是為了視覺化或者機器學習模型需求，必須將資料整理成合乎需求的格式。資料視覺化聽來直觀，那麼關於機器學習呢？我很喜歡[林軒田](http://www.csie.ntu.edu.tw/~htlin/)老師在[機器學習基石](https://www.youtube.com/watch?v=sS4523miLnw&list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf&index=2)簡單明嘹的解釋：
+我們在 [[第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)提過，資料角力的目的是為了視覺化或者機器學習模型需求，必須將資料整理成合乎需求的格式。資料視覺化聽來直觀，那麼關於機器學習呢？我很喜歡[林軒田](http://www.csie.ntu.edu.tw/~htlin/)老師在[機器學習基石](https://www.youtube.com/watch?v=sS4523miLnw&list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf&index=2)簡單明嘹的解釋：
 
 > 我們從小是怎麼樣辨認一棵樹的，是爸爸媽媽告訴我們一百條規則來定義嗎？其實不是的，很大一部分是透過我們自己的觀察很多的樹與不是樹之後，得到並且內化了辨認一棵樹的技巧，機器學習想要做的就是一樣的事情。
 > [林軒田](http://www.csie.ntu.edu.tw/~htlin/)
@@ -45,7 +45,7 @@ iris_df.head() # 觀察前五個觀測值
 
 ![day2101](https://storage.googleapis.com/2017_ithome_ironman/day2101.png)
 
-還有其他更多的玩具資料，像是波士頓房地產資料可以透過 `load_boston()` 方法讀入，糖尿病病患資料可以透過 `load_diabetes()` 方法讀入，參考[Dataset loading utilities - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/datasets/)。
+還有其他更多的玩具資料，像是波士頓房地產資料可以透過 `load_boston()` 方法讀入，糖尿病病患資料可以透過 `load_diabetes()` 方法讀入，詳情參考 [Dataset loading utilities - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/datasets/)。
 
 ### R 語言
 
@@ -264,7 +264,7 @@ summary(lm_fit)$r.squared
 
 ## 小結
 
-第二十一天我們練習使用 Python 的機器學習套件 **scikit-learn**，讀入一些玩具資料（Toy datasets），建立了一個簡單的線性迴歸模型來用氣溫來預測冰紅茶銷量，並且與 R 語言的寫法相互對照。
+第二十一天我們練習使用 Python 的機器學習套件 **scikit-learn**，讀入一些玩具資料（Toy datasets），建立了一個簡單的線性迴歸模型來用氣溫預測冰紅茶銷量，並且與 R 語言的寫法相互對照。
 
 ## 參考連結
 

@@ -1,12 +1,12 @@
-# [R 語言使用者的 Python 學習筆記 - 第 06 天] 資料結構（3）
+# [第 06 天] 資料結構（3）Data Frame
 
 ---
 
-截至 2016-12-06 上午 7 時 第 8 屆 iT 邦幫忙各組的鐵人分別是 46、8、12、12、6 與 58 人，我們想要用一個表格來紀錄參賽的組別與鐵人數。
+截至 2016-12-06 上午 7 時第 8 屆 iT 邦幫忙各組的鐵人分別是 46、8、12、12、6 與 58 人，我們想要用一個表格來紀錄參賽的組別與鐵人數。
 
 R 語言我們可以用 data frame 的資料結構來呈現這個資訊，使用 `data.frame()` 函數可以將 vectors 結合成資料框。
 
-```{r}
+```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 ironmen <- c(46, 8, 12, 12, 6, 58)
 ironmen_df <- data.frame(groups, ironmen)
@@ -18,13 +18,13 @@ View(ironmen_df)
 
 ![day0602](https://storage.googleapis.com/2017_ithome_ironman/day0602.png)
 
-如果我們希望在 Python 中也能夠使用 data frame，我們得仰賴 `pandas` 套件。與第五天討論的 `numpy` 套件一樣，由於我們的開發環境是安裝 [Anaconda](https://www.continuum.io/)，所以不需要再去下載與安裝 `pandas` 套件，只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[R 語言使用者的 Python 學習筆記 - 第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
+如果我們希望在 Python 中也能夠使用 data frame，我們得仰賴 `pandas` 套件。與第五天討論的 `numpy` 套件一樣，由於我們的開發環境是安裝 [Anaconda](https://www.continuum.io/)，所以不需要再去下載與安裝 `pandas` 套件，只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
 
 ## 第一個 pandas 應用
 
-我們引用 `pandas` 套件之後依照使用慣例將它縮寫為 `pd`，最基本建立 data frame 的方式是利用 `pandas` 套件的 `DataFrame()` 方法將一個 dictionary 的資料結構轉換為 data frame（如果你對於 dictionary 資料結構感到陌生，我推薦你閱讀[[R 語言使用者的 Python 學習筆記 - 第 04 天] 資料結構](http://ithelp.ithome.com.tw/articles/10185010)。）
+我們引用 `pandas` 套件之後依照使用慣例將它縮寫為 `pd`，最基本建立 data frame 的方式是利用 `pandas` 套件的 `DataFrame()` 方法將一個 dictionary 的資料結構轉換為 data frame（如果你對於 dictionary 資料結構感到陌生，我推薦你閱讀[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。）
 
-```{python}
+```python
 import pandas as pd # 引用套件並縮寫為 pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -52,7 +52,7 @@ R 語言的使用者如果仍舊對於 `pd.DataFrame()` 的寫法覺得不習慣
 
 如果 data frame 的變數類型相同，亦可以從 matrix 轉換。
 
-```{r}
+```
 my_mat <- matrix(1:4, nrow = 2, dimnames = list(NULL, c("col1", "col2")))
 my_df <- data.frame(my_mat)
 my_df
@@ -64,7 +64,7 @@ my_df
 
 跟 list 的特性相仿，不會像 vector 與 matrix 僅限制容納單一資料類型。
 
-```{r}
+```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 ironmen <- c(46, 8, 12, 12, 6, 58)
 ironmen_df <- data.frame(groups, ironmen)
@@ -78,7 +78,7 @@ sapply(ironmen_df, FUN = class) # 回傳每一個欄位的 class
 
 R 語言透過使用中括號 `[ , ]` 或者 `$` 可以很靈活地從 data frame 中選擇想要的元素（值，列或欄。）
 
-```{r}
+```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 ironmen <- c(46, 8, 12, 12, 6, 58)
 ironmen_df <- data.frame(groups, ironmen)
@@ -96,7 +96,7 @@ ironmen_df$ironmen # 各組的鐵人數
 
 R 語言可以透過邏輯值來針對 data frame 進行觀測值的篩選。
 
-```{r}
+```
 roups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 ironmen <- c(46, 8, 12, 12, 6, 58)
 ironmen_df <- data.frame(groups, ironmen)
@@ -110,7 +110,7 @@ ironmen_df[ironmen_df$ironmen > 10, ] # 選出鐵人數超過 10 的 data frame
 
 R 語言可以透過一些函數來了解 data frame 的概觀。
 
-```{r}
+```
 dim(ironmen_df) # 回傳列數與欄數
 str(ironmen_df) # 回傳結構
 summary(ironmen_df) # 回傳描述性統計
@@ -127,7 +127,7 @@ names(ironmen_df) # 回傳欄位名稱
 
 如果 data frame 的變數類型相同，亦可以從 NumPy 的 2d array 轉換。
 
-```{python}
+```python
 import numpy as np
 import pandas as pd
 
@@ -145,7 +145,7 @@ print(my_df)
 
 跟 list 的特性相仿，不會像 ndarray 僅限制容納單一資料類型。
 
-```{python}
+```python
 import pandas as pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -165,7 +165,7 @@ print(ironmen_df.dtypes) # 欄位的變數類型
 
 Pandas 透過使用中括號 `[]` 與 `.iloc` 可以很靈活地從 data frame 中選擇想要的元素。要注意的是 Python 在指定 `0:1` 時不包含 `1`，在指定 `0:2` 時不包含 `2`，這一點是跟 R 語言有很大的不同之處。
 
-```{python}
+```python
 import pandas as pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -199,7 +199,7 @@ print(ironmen_df.ironmen) # 各組的鐵人數
 
 Pandas 可以透過布林值來針對 data frame 進行觀測值的篩選。
 
-```{python}
+```python
 import pandas as pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -216,11 +216,11 @@ print(ironmen_df[ironmen_df.loc[:,"ironmen"] > 10]) # 選出鐵人數超過 10 �
 
 ![day0612](https://storage.googleapis.com/2017_ithome_ironman/day0612.png)
 
-### 了解 data frame 概觀的函數
+### 了解 data frame 概觀
 
-pandas 有一些方法可以了解 data frame 的概觀。
+Pandas 的 data frame 資料結構有一些方法或屬性可以幫助我們了解概觀。
 
-```{python}
+```python
 import pandas as pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -253,7 +253,7 @@ print(ironmen_df.index) # 回傳 index
 
 截至上一個段落，我們已經對照了四種 R 語言的基本資料結構，還剩下最後一個是 R 語言的 factor，這在 pandas 中可以對照為 category。
 
-```{r}
+```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 groups_factor <- factor(groups) # 轉換為 factor
 groups_factor
@@ -263,7 +263,7 @@ groups_factor
 
 我們利用 `pandas` 套件的 `Categorical()` 方法轉換 list 為 pandas 的 category 資料結構。
 
-```{python}
+```python
 import pandas as pd
 
 groups_categorical = pd.Categorical(["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"])
@@ -278,7 +278,7 @@ print(type(groups_categorical))
 
 R 語言使用 `ordered = TRUE` 與指定 `levels = ` 參數加入 ordinal 的特性。
 
-```{r}
+```
 temperature <- c("cold", "warm", "hot")
 temperature_factor <- factor(temperature, ordered = TRUE, levels = c("cold", "warm", "hot"))
 temperature_factor
@@ -288,7 +288,7 @@ temperature_factor
 
 Pandas 使用 `ordered = True` 與指定 `categories = ` 參數加入 ordinal 的特性。
 
-```{python}
+```python
 import pandas as pd
 
 temperature_list = ["cold", "warm", "hot"]

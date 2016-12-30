@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 10 天] 物件導向
+# [第 10 天] 物件導向 R 語言
 
 ---
 
@@ -7,9 +7,10 @@
 
 R 語言本質上是一個函數型程式語言，而 Python 是一個物件導向程式語言，這也是我認為 R 語言使用者在學習 Python 的時候會感到較為困惑的部分，尤其在面對類別（Class），屬性（Attribute）或者方法（Method）等陌生辭彙的時候，讓我們先用之前做過的練習切入。
 
-截至 2016-12-10 下午 1 時第 8 屆 iT 邦幫忙各組的鐵人分別是 51、8、18、14、6 與 64 人，我們用一個 data frame 來紀錄參賽的組別與鐵人數，如果你對 data frame 這個資料結構有疑惑，我推薦你閱讀 [[R 語言使用者的 Python 學習筆記 - 第 06 天] 資料結構（3）](http://ithelp.ithome.com.tw/articles/10185182)。
+截至 2016-12-10 下午 1 時第 8 屆 iT 邦幫忙各組的鐵人分別是 51、8、18、14、6 與 64 人，我們用一個 data frame 來紀錄參賽的組別與鐵人數，如果你對 data frame 這個資料結構有疑惑，我推薦你閱讀 [[ 第 06 天] 資料結構（3）Data Frame
+](http://ithelp.ithome.com.tw/articles/10185182)。
 
-```{r}
+```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")
 ironmen <- c(51, 8, 18, 14, 6, 64)
 
@@ -20,7 +21,7 @@ head(ironmen_df, n = 3)
 
 ![day1001](https://storage.googleapis.com/2017_ithome_ironman/day1001.png)
 
-```{python}
+```python
 import pandas as pd # 引用套件並縮寫為 pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -58,7 +59,7 @@ R 語言的物件導向有三大類別（Class）：
 
 利用 `typeof()` 與 `is.primitive()` 函數可以驗證什麼物件是屬於 Base types 類別。
 
-```{r}
+```
 # 自訂函數不屬於 base types
 my_square <- function(input_num) {
     return(input_num^2)
@@ -83,7 +84,7 @@ S3 類別是 R 語言裡面最受歡迎的物件導向類別，內建的套件 `
 
 S3 物件不需要正式的宣告或預先定義，只要將一個 list 資料結構給一個類別名稱即可。
 
-```{r}
+```
 library(pryr)
 
 ironmen_list <- list(
@@ -101,7 +102,7 @@ otype(ironmen_list)
 
 使用 `$` 可以取得 S3 物件中的屬性（attributes），跟從 list 資料結構中依元素名稱選取的語法相同。
 
-```{r}
+```
 ironmen_list <- list(
     group = c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"),
     participants = c(51, 8, 18, 14, 6, 64)
@@ -119,7 +120,7 @@ ironmen_list$participants
 
 我們使用 `UseMethod()` 建立一個 S3 類別的方法 `count_participants` 來計算總鐵人數。
 
-```{r}
+```
 # 建立一個 S3 物件
 ironmen_list <- list(
     group = c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"),
@@ -151,7 +152,7 @@ S4 類別相較於 S3 類別更加嚴謹。我們可以使用 `isS4()` 函數來
 
 我們需要使用 `setClass()` 函數來預先定義類別，設定有哪些 `slots` 以及他們的資料類型，並且使用 `new()` 函數建立新的物件。
 
-```{r}
+```
 # 預先定義類別
 setClass("ironmen", slots = list(group="character", participants = "numeric"))
 
@@ -167,7 +168,7 @@ isS4(ironmen_list)
 
 使用 `@` 可以取得 S4 物件中的屬性（attributes）。
 
-```{r}
+```
 # 預先定義類別
 setClass("ironmen", slots = list(group="character", participants = "numeric"))
 
@@ -185,7 +186,7 @@ ironmen_list@participants
 
 我們使用 `setMethod()` 函數建立一個 S4 類別的方法 `count_participants` 來計算總鐵人數。
 
-```{r}
+```
 # 預先定義類別
 setClass("ironmen", slots = list(group="character", participants = "numeric"))
 
@@ -216,7 +217,7 @@ RC 跟 Python 的物件導向較為相像，她建立出來的方法不是內建
 
 我們需要使用 `setRefClass()` 函數來預先定義，設定有哪些 `fields` 以及他們的資料類型。
 
-```{r}
+```
 # 預先定義
 Ironmen <- setRefClass("Ironmen", fields = list(group = "character", participants = "numeric"))
 
@@ -231,7 +232,7 @@ ironmen_list
 
 使用 `$` 可以取得 RC 物件中的屬性（attributes）。
 
-```{r}
+```
 # 預先定義
 Ironmen <- setRefClass("Ironmen", fields = list(group = "character", participants = "numeric"))
 
@@ -248,7 +249,7 @@ ironmen_list$participants
 
 在定義 RC 的時候將方法也撰寫進去。
 
-```{r}
+```
 Ironmen <- setRefClass("Ironmen",
     fields = list(group = "character", participants = "numeric"),
     methods = list(

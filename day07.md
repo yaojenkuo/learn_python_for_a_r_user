@@ -1,12 +1,12 @@
-# [R 語言使用者的 Python 學習筆記 - 第 07 天] 迴圈與流程控制
+# [第 07 天] 迴圈與流程控制
 
 ---
 
 截至 2016-12-07 上午 11 時第 8 屆 iT 邦幫忙各組的鐵人分別是 49、8、12、12、6 與 61 人，我們想要在命令列上一一輸出這六組的鐵人數。
 
-在不撰寫迴圈的情況下，我們還是可以先將這六個數字存在一個 R 語言的 vector 或 Python 的 list，然後再土法煉鋼依照索引值一一把結果輸出在命令列，如果你對這兩個資料結構有一點疑惑，我推薦你參考本系列文章的[[R 語言使用者的 Python 學習筆記 - 第 04 天] 資料結構](http://ithelp.ithome.com.tw/articles/10185010)。
+在不撰寫迴圈的情況下，我們還是可以先將這六個數字存在一個 R 語言的 vector 或 Python 的 list，然後再土法煉鋼依照索引值一一把結果輸出在命令列，如果你對這兩個資料結構有一點疑惑，我推薦你參考本系列文章的[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。
 
-```{r}
+```
 ironmen <- c(49, 8, 12, 12, 6, 61)
 ironmen[1]
 ironmen[2]
@@ -18,7 +18,7 @@ ironmen[6]
 
 ![day0701](https://storage.googleapis.com/2017_ithome_ironman/day0701.png)
 
-```{python}
+```python
 ironmen = [49, 8, 12, 12, 6, 61]
 print(ironmen[0])
 print(ironmen[1])
@@ -38,7 +38,7 @@ print(ironmen[5])
 
 ### for 迴圈
 
-```{r}
+```
 # 不帶索引值的寫法
 ironmen <- c(49, 8, 12, 12, 6, 61)
 for (ironman in ironmen) {
@@ -57,7 +57,7 @@ index # 把迴圈的迭代器（iterator）或稱游標（cursor）最後的值�
 
 ### while 迴圈
 
-```{r}
+```
 ironmen <- c(49, 8, 12, 12, 6, 61)
 index <- 1
 while (index <= length(ironmen)) {
@@ -77,7 +77,7 @@ Python 的迴圈撰寫結構類似 R 語言，不同的是R 語言使用大括�
 
 ### for 迴圈
 
-```{python}
+```python
 # 不帶索引值的寫法
 ironmen = [49, 8, 12, 12, 6, 61]
 for ironman in ironmen:
@@ -98,7 +98,7 @@ print(index) # 把迴圈的迭代器（iterator）或稱游標（cursor）最後
 
 ### while 迴圈
 
-```{python}
+```python
 ironmen = [49, 8, 12, 12, 6, 61]
 index = 0
 while index < len(ironmen):
@@ -110,7 +110,7 @@ print(index) # 把迴圈的迭代器（iterator）或稱游標（cursor）最後
 
 ![day0706](https://storage.googleapis.com/2017_ithome_ironman/day0706.png)
 
-在撰寫迴圈的時候你會發現到跟 R 語言因為索引值起始值不同（R 語言的資料結構索引值由 1 起始，Python 由 0 起始）而做出相對應的調整，另外，如果你對於 while 迴圈中 `index += 1` 的寫法感到陌生，我推薦你參考本系列文章的[[R 語言使用者的 Python 學習筆記 - 第 03 天] 變數類型的轉換](http://ithelp.ithome.com.tw/articles/10184901)。
+在撰寫迴圈的時候你會發現到跟 R 語言因為索引值起始值不同（R 語言的資料結構索引值由 1 起始，Python 由 0 起始）而做出相對應的調整，另外，如果你對於 while 迴圈中 `index += 1` 的寫法感到陌生，我推薦你參考本系列文章的[[第 03 天] 變數類型的轉換](http://ithelp.ithome.com.tw/articles/10184901)。
 
 ## R 語言的流程控制
 
@@ -120,7 +120,7 @@ R 語言可以透過 `if-else if-else` 的結構創造程式執行的分支，�
 
 整數除以 2 的餘數只會有兩種答案，使用 `if-else` 結構依照餘數的值回傳對應的訊息。
 
-```{r}
+```
 my_seq <- 1:10
 for (i in my_seq) {
     if (i %% 2 == 0) {
@@ -137,7 +137,7 @@ for (i in my_seq) {
 
 整數除以 3 的餘數會有三種答案，使用 `if-else if-else` 結構依照餘數的值回傳對應的訊息。
 
-```{r}
+```
 my_seq <- 1:10
 for (i in my_seq) {
     if (i %% 3 == 0) {
@@ -156,7 +156,7 @@ for (i in my_seq) {
 
 將 `if-else if-else` 結構用 `switch()` 函數改寫，這裡要注意的是我們要先調整為用文字型態來判斷。
 
-```{r}
+```
 my_seq <- 1:10
 for (i in my_seq) {
     ans <- i %% 3
@@ -178,7 +178,7 @@ Python 透過 `if-elif-else` 的結構創造程式執行的分支，當我們只
 
 整數除以 2 的餘數只會有兩種答案，使用 `if-else` 結構依照餘數的值回傳對應的訊息。
 
-```{python}
+```python
 my_seq = list(range(1, 11))
 for index in my_seq:
     if (index % 2 == 0):
@@ -193,7 +193,7 @@ for index in my_seq:
 
 整數除以 3 的餘數會有三種答案，使用 `if-elif-else` 結構依照餘數的值回傳對應的訊息。
 
-```{python}
+```python
 my_seq = list(range(1,11))
 for index in my_seq:
     if (index % 3 == 0):
@@ -214,7 +214,7 @@ for index in my_seq:
 
 利用 `break` 描述告訴 for 迴圈當迭代器（此處指變數 ironman）小於 10 的時候要結束迴圈；利用 `next` 描述告訴 for 迴圈當迭代器小於 10 的時候要跳過它然後繼續執行。
 
-```{r}
+```
 # break 描述
 ironmen <- c(49, 8, 12, 12, 6, 61)
 for (ironman in ironmen) {
@@ -243,7 +243,7 @@ ironman # 把迴圈的迭代器（iterator）或稱游標（cursor）最後的�
 
 利用 `break` 描述告訴 for 迴圈當迭代器（此處指變數 ironman）小於 10 的時候要結束迴圈；利用 `continue` 描述告訴 for 迴圈當迭代器小於 10 的時候要跳過它然後繼續執行。
 
-```{python}
+```python
 # break 描述
 ironmen = [49, 8, 12, 12, 6, 61]
 for ironman in ironmen:
@@ -276,4 +276,4 @@ print(ironman) # 把迴圈的迭代器（iterator）或稱游標（cursor）最�
 
 ## 參考連結
 
--[Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
+- [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)

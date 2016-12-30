@@ -1,10 +1,10 @@
-# [R 語言使用者的 Python 學習筆記 - 第 03 天] 變數類型的轉換
+# [第 03 天] 變數類型的轉換
 
 ---
 
 不同的變數類型之間並不是壁壘分明，井水不犯河水，比如在 Python 中 `True/False` 在與數值作加減運算的時候就會自動地被轉換為 `1` 與 `0`，然而在一些不是這麼顯而易見的情況之下，就要仰賴手動進行變數類型的轉換，比方說我想要 Python 印出下列這句話會得到 TypeError。
 
-```{python}
+```python
 days = 30
 print("In order to become an ironman, you have to publish an article a day for " + days + " days in a row.")
 ```
@@ -17,7 +17,7 @@ print("In order to become an ironman, you have to publish an article a day for "
 
 Python 具備很便利的指派運算子像是：`+=`，`-=`，`*=`，`/=`，`%/` 讓我們的程式更簡潔，像是這段程式：
 
-```{python}
+```python
 days = 30
 days = days + 3
 days # 33
@@ -27,7 +27,7 @@ days # 33
 
 其中的 `days = days + 3` 可以寫作 `days += 3`。
 
-```{python}
+```python
 days = 30
 days += 3
 days # 33
@@ -37,7 +37,7 @@ days # 33
 
 這些指派運算子在 R 語言是沒有辦法使用的，所以這樣的寫法其實對我而言是陌生的，所以我多寫了幾行感受一下。
 
-```{python}
+```python
 days = 30
 days += 3
 print(days) # 33
@@ -59,7 +59,7 @@ print(days) # 2.0
 
 在 R 語言透過 `paste()` 函數不需要做變數類型的轉換就可以完成在 Python 得到 TypeError 的那個例子。
 
-```{r}
+```
 days <- 30
 paste("In order to become an ironman, you have to publish an article a day for", days, "days in a row.")
 ```
@@ -76,7 +76,7 @@ R 語言轉換變數類型的函數都是以 `as.` 作為開頭然後將要轉�
 
 我們利用最有彈性的邏輯值來展示這幾個函數的功能。
 
-```{r}
+```
 my_logical <- TRUE
 class(my_logical) # "logical"
 as.numeric(my_logical) # 1
@@ -93,7 +93,7 @@ as.character(my_logical) # "TRUE"
 
 透過 `str()` 函數就可以修正先前碰到的 TypeError 問題。
 
-```{python}
+```python
 days = 30
 print("In order to become an ironman, you have to publish an article a day for " + str(days) + " days in a row.")
 ```
@@ -110,7 +110,7 @@ Python 轉換變數類型的函數：
 
 我們利用最有彈性的布林值來展示這幾個函數的功能。
 
-```{python}
+```python
 my_bool = True
 print(type(my_bool)) # 'bool'
 print(float(my_bool)) # 1.0

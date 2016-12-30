@@ -191,13 +191,50 @@ sess.close()
 
 這份學習筆記從一個 R 語言使用者學習 Python 在資料科學的應用，並且相互對照的角度出發，整份學習筆記可以分為五大主題：
 
-主題|起|迄
----|---|---
-基礎|[[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)|[[第 11 天] 物件導向（2）Python](http://ithelp.ithome.com.tw/articles/10185648)
-基礎應用|[[第 12 天] 常用屬性或方法 變數與基本資料結構](http://ithelp.ithome.com.tw/articles/10185736)|[[第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)
-視覺化|[[第 18 天] 資料視覺化 matplotlib](http://ithelp.ithome.com.tw/articles/10186484)|[[第 20 天] 資料視覺化（3）Bokeh](http://ithelp.ithome.com.tw/articles/10186749)
-機器學習|[[第 21 天] 機器學習 玩具資料與線性迴歸](http://ithelp.ithome.com.tw/articles/10186905)|[[第 26 天] 機器學習（6）隨機森林與支持向量機](http://ithelp.ithome.com.tw/articles/10187569)
-深度學習|[[第 27 天] 深度學習 TensorFlow](http://ithelp.ithome.com.tw/articles/10187702)|[[第 30 天] 深度學習（4）卷積神經網絡與鐵人賽總結](http://ithelp.ithome.com.tw/articles/10188044)
+#### 基礎
+
+- [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)
+- [[第 02 天] 基本變數類型](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day02.md)
+- [[第 03 天] 變數類型的轉換](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day03.md)
+- [[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)
+- [[第 05 天] 資料結構（2）ndarray](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day05.md)
+- [[第 06 天] 資料結構（3）Data Frame](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day06.md)
+- [[第 07 天] 迴圈與流程控制](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day07.md)
+- [[第 08 天] 函數](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day08.md)
+- [[第 09 天] 函數（2）](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day09.md)
+- [[第 10 天] 物件導向 R 語言](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day10.md)
+- [[第 11 天] 物件導向（2）Python](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day11.md)
+
+#### 基礎應用
+
+- [[第 12 天] 常用屬性或方法 變數與基本資料結構](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day12.md)
+- [[第 13 天] 常用屬性或方法（2）ndarray](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day13.md)
+- [[第 14 天] 常用屬性或方法（3）Data Frame](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day14.md)
+- [[第 15 天] 載入資料](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day15.md)
+- [[第 16 天] 網頁解析](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day16.md)
+- [[第 17 天] 資料角力](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day17.md)
+
+#### 視覺化
+
+- [[第 18 天] 資料視覺化 matplotlib](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md)
+- [[第 19 天] 資料視覺化（2）Seaborn](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day19.md)
+- [[第 20 天] 資料視覺化（3）Bokeh](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day20.md) 
+
+#### 機器學習
+
+- [[第 21 天] 機器學習 玩具資料與線性迴歸](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day21.md)
+- [[第 22 天] 機器學習（2）複迴歸與 Logistic 迴歸](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day22.md)
+- [[第 23 天] 機器學習（3）決策樹與 k-NN 分類器](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day23.md)
+- [[第 24 天] 機器學習（4）分群演算法](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day24.md)
+- [[第 25 天] 機器學習（5）整體學習](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day25.md)
+- [[第 26 天] 機器學習（6）隨機森林與支持向量機](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day26.md)
+
+#### 深度學習
+
+- [[第 27 天] 深度學習 TensorFlow](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day27.md)
+- [[第 28 天] 深度學習（2）TensorBoard](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day28.md)
+- [[第 29 天] 深度學習（3）MNIST 手寫數字辨識](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day29.md)
+- [[第 30 天] 深度學習（4）卷積神經網絡與鐵人賽總結](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day30.md)
 
 ### 主觀比較表
 
@@ -209,7 +246,7 @@ sess.close()
 變數|和|和|兩個程式語言在變數的指派，判斷與轉換上都很直覺。
 資料結構|勝|負|R 語言內建資料框與 `element-wise` 運算，Python 需要仰賴 `pandas` 與 `numpy`。
 資料載入|和|和|兩個程式語言都可以透過套件的支援載入表格式資料或 JSON 等資料格式。
-網頁解析|和|和|R 語言的 `rvest` 與 Python 的 `beautifulsoup` 都能讓使用者輕鬆解析網頁資料。
+網頁解析|和|和|R 語言的 `rvest` 與 Python 的 `BeautifulSoup` 都能讓使用者輕鬆解析網頁資料。
 資料角力|和|和|兩個程式語言的套件或函數都支援常見的資料角力技巧。
 玩具資料|勝|負|R 語言內建的玩具資料數量多，文件說明豐富。
 資料視覺化|勝|負|R 語言 `ggplot2` 的多樣繪圖功能搭配 `ggplotly()`，可以更簡單地畫出美觀的圖。
@@ -259,7 +296,9 @@ sess.close()
 
 初次聽到 iT 邦幫忙鐵人賽是在自學 [Git](https://git-scm.com/) 的時候看保哥 [30 天精通 Git 版本控管](https://github.com/doggy8088/Learn-Git-in-30-days)，當時就暗自下定決心有機會也要參賽，用 30 天向世界宣告這一年鋼鐵般的鍛鍊！
 
-這份學習筆記野心很大，初衷是希望可以解決一個常見問題：想要從事資料科學相關的工作，時間只能夠在 R 語言與 Python 中擇一學習，請問各位大大推薦先從哪一個開始？所以我們在絕大多數的章節中，讓兩個程式語言處理同一個資料科學問題，並陳她們的語法以便讓讀者可以體會箇中異同，進而達成目標：**讀完我（或我的部分章節），你的心中會自然作出選擇**，請放心且大膽地選擇一個開始你的資料科學旅程，她們都是在資料科學應用上我們能大力仰賴的程式語言。
+這份學習筆記野心很大，初衷是希望可以解決一個常見問題：**想要從事資料科學相關的工作，時間只能夠在 R 語言與 Python 中擇一學習，請問各位大大推薦先從哪一個開始？**
+
+所以我們在絕大多數的章節中，讓兩個程式語言處理同一個資料科學問題，並陳她們的語法以便讓讀者可以體會箇中異同，進而達成目標：**讀完我（或我的部分章節），你的心中會自然作出選擇**，請放心且大膽地選擇一個開始你的資料科學旅程，她們都是在資料科學應用上我們能大力仰賴的程式語言。
 
 > Both languages have a lot of similarities in syntax and approach, and you can’t go wrong with one, the other, or both.
 > [Vik Paruchuri](https://www.dataquest.io/blog/python-vs-r/)

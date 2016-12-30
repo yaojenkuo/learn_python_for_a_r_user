@@ -1,17 +1,17 @@
-# [R 語言使用者的 Python 學習筆記 - 第 08 天] 函數
+# [第 08 天] 函數
 
 ---
 
-早在 [[R 語言使用者的 Python 學習筆記 - 第 02 天] 基本變數類型](http://ithelp.ithome.com.tw/articles/10184855)我們就開始使用 Python 的內建函數（generic functions），像是我們使用 `help()` 函數查詢文件以及使用 `type()` 函數來觀察我們的變數類型為 str，int 或者 bool。對於 R 語言使用者而言，函數可是我們的最愛，因為本質上 R 語言是一個函數型編程語言（functional programming language）。
+早在 [[第 02 天] 基本變數類型](http://ithelp.ithome.com.tw/articles/10184855)我們就開始使用 Python 的內建函數（generic functions），像是我們使用 `help()` 函數查詢文件以及使用 `type()` 函數來觀察我們的變數類型為 str，int 或者 bool。對於 R 語言使用者而言，函數可是我們的最愛，因為本質上 R 語言是一個函數型編程語言（functional programming language）。
 
 > (Almost) everything is a function call.
 > By [John Chambers](https://en.wikipedia.org/wiki/John_Chambers_(statistician))
 
 ## 應用內建函數
 
-截至 2016-12-08 上午 8 時第 8 屆 iT 邦幫忙各組的鐵人分別是 50、8、16、12、6 與 62 人，我們將這個資訊存在一個 R 語言的 vector 或 Python 的 list，然後對這個資料結構使用一些內建函數。如果你對這兩個資料結構有點疑惑，我推薦你參考本系列文章的 [[R 語言使用者的 Python 學習筆記 - 第 04 天] 資料結構](http://ithelp.ithome.com.tw/articles/10185010)。
+截至 2016-12-08 上午 8 時第 8 屆 iT 邦幫忙各組的鐵人分別是 50、8、16、12、6 與 62 人，我們將這個資訊存在一個 R 語言的 vector 或 Python 的 list，然後對這個資料結構使用一些內建函數。如果你對這兩個資料結構有點疑惑，我推薦你參考本系列文章的 [[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。
 
-```{r}
+```
 ironmen <- c(50, 8, 16, 12, 6, 62)
 
 # 應用函數
@@ -24,7 +24,7 @@ sort(ironmen, decreasing = TRUE) # 遞減排序
 
 ![day0801](https://storage.googleapis.com/2017_ithome_ironman/day0801.png)
 
-```{python}
+```python
 ironmen = [50, 8, 16, 12, 6, 62]
 
 # 應用函數
@@ -41,27 +41,27 @@ print(sorted(ironmen, reverse = True)) # 遞減排序
 
 不論是 R 語言或者 Python，我們都必須要求自己養成查詢函數文件的習慣，了解一個函數的輸入與它可以設定的參數，例如上面例子中，查詢文件之後就知道能在排序的函數中修改參數調整為遞增或遞減排序。
 
-```{r}
+```
 ?sort
 help(sort)
 ```
 
 ![day0803](https://storage.googleapis.com/2017_ithome_ironman/day0803.png)
 
-```{python}
+```python
 sorted?
 help(sorted)
 ```
 
 ![day0804](https://storage.googleapis.com/2017_ithome_ironman/day0804.png)
 
-為了讓程式更加有組織性，更好管理與具備重複使用性，除了使用內建函數以外我們得要學習自訂函數。在自訂函數時候我們會使用**迴圈**與**流程控制**，如果你對這兩個概念有點疑惑，我推薦你參考本系列文章的 [[R 語言使用者的 Python 學習筆記 - 第 07 天] 迴圈與流程控制](http://ithelp.ithome.com.tw/articles/10185299)。
+為了讓程式更加有組織性，更好管理與具備重複使用性，除了使用內建函數以外我們得要學習自訂函數。在自訂函數時候我們會使用**迴圈**與**流程控制**，如果你對這兩個概念有點疑惑，我推薦你參考本系列文章的 [[第 07 天] 迴圈與流程控制](http://ithelp.ithome.com.tw/articles/10185299)。
 
 ## R 語言的自訂函數
 
 R 語言自訂函數的架構：
 
-```{r}
+```
 function_name <- function(輸入, 參數 1, 參數 2, ...) {
     # 函數做些什麼事
     return(結果)
@@ -74,7 +74,7 @@ function_name <- function(輸入, 參數 1, 參數 2, ...) {
 
 第一個練習是輸入圓形的半徑長，依照參數的指定回傳面積或周長。
 
-```{r}
+```
 # 定義自訂函數
 circle_calculate <- function(radius, area = TRUE) {
     circle_area <- pi * radius^2
@@ -98,7 +98,7 @@ circle_calculate(my_radius, area = FALSE) # 指定參數回傳周長
 
 第二個練習是寫程式的基本功交換排序法。
 
-```{r}
+```
 # 定義自訂函數
 exchange_sort <- function(input_vector, decreasing = FALSE) {
     input_vector_cloned <- input_vector # 複製一個輸入向量
@@ -143,7 +143,7 @@ exchange_sort(my_vector, decreasing = TRUE) # 指定參數遞減排序
 
 Python 自訂函數的架構：
 
-```{python}
+```python
 def function_name(輸入, 參數 1, 參數 2, ...):
     '''
     Docstrings
@@ -158,7 +158,7 @@ Python 使用者習慣加入 Docstrings 做自訂函數的說明，接著我們�
 
 第一個練習是輸入圓形的半徑長，依照參數的指定回傳面積或周長。
 
-```{python}
+```python
 import math # 要使用 pi 得引入套件 math
 
 # 定義自訂函數
@@ -183,7 +183,7 @@ print(circle_calculate(my_radius, area = False)) # 指定參數回傳周長
 
 第二個練習是寫程式的基本功交換排序法。
 
-```{python}
+```python
 import random # 呼叫函數時使用隨機整數
 
 # 定義自訂函數
@@ -228,7 +228,7 @@ print(exchange_sort(my_vector, reverse = True)) # 指定參數遞減排序
 
 使用 list 資料結構將回傳值包裝起來再依名稱呼叫。
 
-```{r}
+```
 # 定義自訂函數
 ironmen_stats <- function(ironmen_vector) {
     max_ironmen <- max(ironmen_vector)
@@ -259,7 +259,7 @@ paste("總鐵人數：", ironmen_stats(ironmen)$ttl_ironmen, sep = '')
 
 在 `return` 後面將多個值用逗號 `,` 隔開就會回傳一個 tuple。
 
-```{python}
+```python
 # 定義自訂函數
 def ironmen_stats(ironmen_list):
     max_ironmen = max(ironmen_list)
@@ -284,7 +284,7 @@ print("\n", 最多：", max_ironmen, "\n", "最少：", min_ironmen, "\n", "總�
 
 利用匿名函數 `function(x) x * 30` 把每組的鐵人數乘以 30 可以得到預期的各組文章總數。
 
-```{r}
+```
 ironmen <- c(50, 8, 16, 12, 6, 62)
 ironmen_articles <- sapply(ironmen, function(x) x * 30)
 ironmen_articles
@@ -296,7 +296,7 @@ ironmen_articles
 
 Python 的匿名函數稱為 lambda 函數，利用 `lambda x : x * 30` 把每組的鐵人數乘以 30 可以得到預期的各組文章總數。
 
-```{python}
+```python
 ironmen = [50, 8, 16, 12, 6, 62]
 ironmen_articles = list(map(lambda x : x * 30, ironmen))
 print(ironmen_articles)

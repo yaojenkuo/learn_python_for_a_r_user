@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 27 天] 深度學習
+# [第 27 天] 深度學習 TensorFlow
 
 ---
 
@@ -12,7 +12,7 @@
 
 ## 安裝 TensorFlow
 
-我們的開發環境是 [Anaconda](https://www.continuum.io/downloads)，如果你對本系列文章的開發環境有興趣，可以參照 [[R 語言使用者的 Python 學習筆記 - 第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+我們的開發環境是 [Anaconda](https://www.continuum.io/downloads)，如果你對本系列文章的開發環境有興趣，可以參照 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
 
 ### 第一步（pip 安裝）
 
@@ -64,7 +64,7 @@ train = optimizer.minimize(loss)
 # 初始化
 init = tf.global_variables_initializer()
 
-# 將神經網路圖畫出來
+# 將神經網絡圖畫出來
 sess = tf.Session()
 sess.run(init)
 
@@ -74,6 +74,9 @@ for step in range(201):
     sess.run(train)
     if step % 20 == 0:
         print(step, sess.run(W), sess.run(b))
+        
+# 關閉 Session
+sess.close()
 ```
 
 ![day2703](https://storage.googleapis.com/2017_ithome_ironman/day2703.png)
@@ -112,7 +115,7 @@ product = tf.matmul(matrix1, matrix2)
 
 ![day2704](https://storage.googleapis.com/2017_ithome_ironman/day2704.png)
 
-現在我們的運算元已經建立好，有三個節點，分別是兩個 `constant()` 與一個 `matmul()`，意即神經網路的圖已經建構完成，但是尚未執行運算。
+現在我們的運算元已經建立好，有三個節點，分別是兩個 `constant()` 與一個 `matmul()`，意即神經網絡的圖已經建構完成，但是尚未執行運算。
 
 ### 執行運算
 
@@ -197,7 +200,6 @@ result = tf.matmul(matrix1, matrix2)
 print(result.eval())
 
 # 關閉 Session
-# Close the Session when we're done.
 sess.close()
 ```
 
@@ -228,6 +230,9 @@ with tf.Session() as sess:
     for _ in range(3):
         sess.run(update)
         print(sess.run(state))
+        
+# 關閉 Session
+sess.close()
 ```
 
 ![day2709](https://storage.googleapis.com/2017_ithome_ironman/day2709.png)
@@ -268,7 +273,7 @@ with tf.Session() as sess:
 
 ## 小結
 
-第二十七天我們開始練習使用 Python 的深度學習套件 **TensorFlow**，我們成功安裝了 `tensorflow`，並練習官方文件的第一個練習：使用梯度遞減逼近迴歸模型的係數與截距。此外我們也從基礎使用的範例中瞭解 **TensorFlow** 模型產出的過程，我們首先建立運算元，畫出神經網路圖，初始化變數，最後才是執行運算並輸出結果，這也跟我們在前面幾天的練習中，先初始化一個分類器然後才將資料投入進行運算的概念相似。
+第二十七天我們開始練習使用 Python 的神經網絡套件 **TensorFlow**，我們成功安裝了 `tensorflow`，並實作官方文件的第一個練習：使用梯度遞減逼近迴歸模型的係數與截距。此外我們也從基礎使用的範例中瞭解 **TensorFlow** 模型產出的過程，我們首先建立運算元，畫出神經網絡圖，初始化變數，最後才是執行運算並輸出結果，這也跟我們在前面幾天的練習中，先初始化一個分類器然後才將資料投入進行運算的概念相似。
 
 ## 參考連結
 

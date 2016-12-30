@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 23 天] 機器學習（3）
+# [第 23 天] 機器學習（3）決策樹與 k-NN 分類器
 
 ---
 
@@ -29,7 +29,7 @@ encoded_Pclass = label_encoder.fit_transform(titanic_train["Pclass"])
 > Decision Trees Classifiers are a non-parametric supervised learning method used for classification, that are capable of performing multi-class classification on a dataset. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features.
 > [1.10. Decision Trees - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/tree.html)
 
-我們使用 **scikit-learn** 機器學習套件的其中一個玩具資料（Toy datasets）**鳶尾花資料**，利用花瓣（Petal）的長和寬跟花萼（Sepal）的長和寬來預測花的種類，藉此練習使用決策樹演算法建立一個三元分類器。如果你對玩具資料感到陌生，我推薦你參考 [[R 語言使用者的 Python 學習筆記 - 第 21 天] 機器學習](http://ithelp.ithome.com.tw/articles/10186905)。
+我們使用 **scikit-learn** 機器學習套件的其中一個玩具資料（Toy datasets）**鳶尾花資料**，利用花瓣（Petal）的長和寬跟花萼（Sepal）的長和寬來預測花的種類，藉此練習使用決策樹演算法建立一個三元分類器。如果你對玩具資料感到陌生，我推薦你參考 [[第 21 天] 機器學習 玩具資料與線性迴歸](http://ithelp.ithome.com.tw/articles/10186905)。
 
 ### Python
 

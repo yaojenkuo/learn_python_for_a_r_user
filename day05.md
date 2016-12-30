@@ -1,12 +1,12 @@
-# [R 語言使用者的 Python 學習筆記 - 第 05 天] 資料結構（2）
+# [第 05 天] 資料結構（2）ndarray
 
 ---
 
-截至 2016-12-05 上午 11 時 第 8 屆 iT 邦幫忙各組的鐵人分別是 46、8、11、11、4 與 56 人，我們想計算參賽鐵人們完賽後各組的總文章數分別是多少。
+截至 2016-12-05 上午 11 時第 8 屆 iT 邦幫忙各組的鐵人分別是 46、8、11、11、4 與 56 人，我們想計算參賽鐵人們完賽後各組的總文章數分別是多少。
 
 R 語言我們直接用一個 vector 儲存各組人數後乘以 30，就能得到一個 element-wise 的計算結果，這就是我們要的答案。
 
-```{r}
+```
 ironmen <- c(46, 8, 11, 11, 4, 56)
 articles <- ironmen * 30
 articles
@@ -16,7 +16,7 @@ articles
 
 如果利用 Python 的 list 資料結構，會發現 Python 會輸出 30 次 ironmen，這並不是我們想要的答案。
 
-```{python}
+```python
 ironmen = [46, 8, 11, 11, 4, 56]
 articles = ironmen * 30
 print(articles)
@@ -26,7 +26,7 @@ print(articles)
 
 假如我們寫得再謹慎一點，例如將 30 也用 list 包裝起來，這時我們會發現 Python 回傳了一個錯誤訊息。
 
-```{python}
+```python
 ironmen = [46, 8, 11, 11, 4, 56]
 article_multiplier = [30, 30, 30, 30, 30, 30]
 articles = ironmen * article_multiplier
@@ -39,9 +39,9 @@ print(articles)
 
 ## 第一個 numpy 應用
 
-我們來使用 `numpy` 套件中的 **ndarray** 解決先前遭遇到的問題。由於我們的開發環境安裝 [Anaconda](https://www.continuum.io/) ，所以我們不需要再去下載與安裝 `numpy` 套件，我們只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[R 語言使用者的 Python 學習筆記 - 第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
+我們來使用 `numpy` 套件中的 **ndarray** 解決先前遭遇到的問題。由於我們的開發環境安裝 [Anaconda](https://www.continuum.io/) ，所以我們不需要再去下載與安裝 `numpy` 套件，我們只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
 
-```{python}
+```python
 import numpy # 引用套件
 
 ironmen = numpy.array([46, 8, 11, 11, 4, 56]) # 將 list 透過 numpy 的 array 方法進行轉換
@@ -57,7 +57,7 @@ R 語言的使用者習慣函數式編程（functional programming），對於 `
 
 為了少打幾個字，我們引用 `numpy` 套件之後依照使用慣例將它縮寫為 `np`。
 
-```{python}
+```python
 import numpy as np # 引用套件並縮寫為 np
 
 ironmen = np.array([46, 8, 11, 11, 4, 56]) # 將 list 透過 numpy 的 array 方法進行轉換
@@ -69,7 +69,7 @@ print(articles)
 
 ![day0505](https://storage.googleapis.com/2017_ithome_ironman/day0505.png)
 
-我們回顧一下 R 語言資料結構中的 vector 與 matrix，然後再研究 Python 的 ndarray。
+我們回顧一下 R 語言資料結構中的 vector 與 matrix，然後再研究 `numpy` 的 ndarray。
 
 ## R 語言的 vector 與 matrix
 
@@ -77,7 +77,7 @@ print(articles)
 
 R 語言的 vector 與 matrix 都只能容許一種資料類型，如果同時儲存有數值，邏輯值，會被自動轉換為數值，如果同時儲存有數值，邏輯值與文字，會被自動轉換為文字。
 
-```{r}
+```
 my_vector <- c(1, TRUE)
 class(my_vector) # "numeric"
 my_vector <- c(1, TRUE, "one")
@@ -86,7 +86,7 @@ class(my_vector) # "character"
 
 ![day0506](https://storage.googleapis.com/2017_ithome_ironman/day0506.png)
 
-```{r}
+```
 my_matrix <- matrix(c(1, 0, TRUE, FALSE), nrow = 2)
 my_matrix
 my_matrix <- matrix(c(1, "zero", TRUE, FALSE), nrow = 2)
@@ -99,7 +99,7 @@ my_matrix
 
 R 語言的 vector 與 matrix 完全支持 element-wise 運算。
 
-```{r}
+```
 my_vector <- 1:4
 my_vector ^ 2
 
@@ -113,7 +113,7 @@ my_matrix ^ 2
 
 R 語言的 vector 與 matrix 都透過中括號 `[]` 或者邏輯值選擇元素。
 
-```{r}
+```
 ironmen <- c(46, 8, 11, 11, 4, 56)
 ironmen[1] # 選出 Modern Web 組的鐵人數
 ironmen > 10 # 哪幾組的鐵人數超過 10 人
@@ -124,7 +124,7 @@ names(ironmen[ironmen > 10]) # 超過 10 人參賽的組別名
 
 ![day0509](https://storage.googleapis.com/2017_ithome_ironman/day0509.png)
 
-```{r}
+```
 ironmen <- c(46, 8, 11, 11, 4, 56)
 ironmen_mat <- matrix(ironmen, nrow = 2)
 ironmen_mat[1, 1] # 選出 Modern Web 組的鐵人數
@@ -138,7 +138,7 @@ ironmen_mat[ironmen_mat > 10] # 超過 10 人的鐵人數
 
 R 語言可以透過 `length()` 與 `dim()` 函數來了解 matrix 的規模。
 
-```{r}
+```
 ironmen <- c(46, 8, 11, 11, 4, 56)
 ironmen_mat <- matrix(ironmen, nrow = 2)
 length(ironmen_mat)
@@ -147,13 +147,13 @@ dim(ironmen_mat)
 
 ![day0511](https://storage.googleapis.com/2017_ithome_ironman/day0511.png)
 
-## Python 的 ndarray
+## NumPy 的 ndarray
 
 ### 單一資料類型
 
 NumPy 的 ndarray 只能容許一種資料類型，如果同時儲存有數值，布林值，會被自動轉換為數值，如果同時儲存有數值，布林值與文字，會被自動轉換為文字。
 
-```{python}
+```python
 import numpy as np
 
 my_np_array = np.array([1, True])
@@ -164,7 +164,7 @@ print(my_np_array.dtype) # unicode_21
 
 ![day0512](https://storage.googleapis.com/2017_ithome_ironman/day0512.png)
 
-```{python}
+```python
 import numpy as np
 
 my_2d_array = np.array([[1, True],
@@ -182,7 +182,7 @@ print(my_2d_array)
 
 NumPy 的 ndarray 完全支持 element-wise 運算。
 
-```{python}
+```python
 import numpy as np
 
 my_np_array = np.array([1, 2, 3, 4])
@@ -199,7 +199,7 @@ print(my_2d_array ** 2)
 
 NumPy 的 ndarray 透過中括號 `[]` 或者布林值選擇元素。
 
-```{python}
+```python
 import numpy as np
 
 ironmen = np.array([46, 8, 11, 11, 4, 56])
@@ -210,7 +210,7 @@ print(ironmen[ironmen > 10]) # 超過 10 人的鐵人數
 
 ![day0515](https://storage.googleapis.com/2017_ithome_ironman/day0515.png)
 
-```{python}
+```python
 import numpy as np
 
 ironmen_2d_array = np.array([[46, 11, 4],
@@ -222,11 +222,11 @@ print(ironmen_2d_array[ironmen_2d_array > 10]) # 超過 10 人的鐵人數
 
 ![day0516](https://storage.googleapis.com/2017_ithome_ironman/day0516.png)
 
-### 了解 2d array 外觀的函數
+### 了解 2d array 外觀的屬性
 
 NumPy 可以透過 `.size` 與 `.shape` 來了解 2d array 的規模。
 
-```{python}
+```python
 import numpy as np
 
 ironmen_2d_array = np.array([[46, 11, 4],

@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 01 天] 建立開發環境與計算機應用
+# [第 01 天] 建立開發環境與計算機應用
 
 ---
 
@@ -61,7 +61,7 @@ $ jupyter notebook
 
 在剛剛新增的 Python 3 Notebook 的第一個 cell 輸入一些簡單的加減乘除。
 
-```{python}
+```python
 print(2 + 3)
 print(2 - 3)
 print(2 * 3)
@@ -74,7 +74,7 @@ print(10 % 4) # R 語言使用 10 %% 4
 
 ![day0103](https://storage.googleapis.com/2017_ithome_ironman/day0103.png)
 
-![day0104](https://storage.googleapis.com/2017_ithome_ironman/day0104.png)
+![day0105](https://storage.googleapis.com/2017_ithome_ironman/day0105.png)
 
 跟 R 語言的運算子略有出入的地方在指數與餘數計算的部分。Python 使用 `**` 而非 `^` 來計算指數，使用 `%` 而非 `%%` 作餘數的計算。
 

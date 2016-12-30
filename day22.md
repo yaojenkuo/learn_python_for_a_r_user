@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 22 天] 機器學習（2）
+# [第 22 天] 機器學習（2）複迴歸與 Logistic 迴歸
 
 ---
 
-我們今天要繼續使用 **scikit-learn** 機器學習套件延續昨天的線性迴歸，練習一個複迴歸以及一個 Logistic 迴歸。如果你還記得 [scikit-learn 首頁](http://scikit-learn.org/stable/index.html) 的應用領域，很明顯線性迴歸與複迴歸是屬於**迴歸（Regression）**應用領域，但是 Logistic 迴歸呢？她好像應當被歸類在**分類（Classification）**應用領域，但名字中又有迴歸兩個字？從 [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) 我們瞭解 Logistic 迴歸是預測機率的方法，屬於二元分類的應用領域。
+我們今天要繼續使用 **scikit-learn** 機器學習套件延續[昨天](http://ithelp.ithome.com.tw/articles/10186905)的線性迴歸，練習一個複迴歸以及一個 Logistic 迴歸。如果你還記得 [scikit-learn 首頁](http://scikit-learn.org/stable/index.html) 的應用領域，很明顯線性迴歸與複迴歸是屬於**迴歸（Regression）**應用領域，但是 Logistic 迴歸呢？她好像應當被歸類在**分類（Classification）**應用領域，但名字中又有迴歸兩個字？從 [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) 我們瞭解 Logistic 迴歸是預測機率的方法，屬於二元分類的應用領域。
 
 > Logistic regression, despite its name, is a linear model for classification rather than regression.
 > [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
@@ -240,10 +240,9 @@ titanic_train
 # 創造 dummy variables
 label_encoder = preprocessing.LabelEncoder()
 encoded_Sex = label_encoder.fit_transform(titanic_train["Sex"])
-encoded_Pclass = label_encoder.fit_transform(titanic_train["Pclass"])
 
 # 建立 train_X
-train_X = pd.DataFrame([encoded_Pclass,
+train_X = pd.DataFrame([titanic_train["Pclass"],
                         encoded_Sex,
                         titanic_train["Age"]
 ]).T
@@ -312,10 +311,9 @@ titanic_train
 # 創造 dummy variables
 label_encoder = preprocessing.LabelEncoder()
 encoded_Sex = label_encoder.fit_transform(titanic_train["Sex"])
-encoded_Pclass = label_encoder.fit_transform(titanic_train["Pclass"])
 
 # 建立 train_X
-train_X = pd.DataFrame([encoded_Pclass,
+train_X = pd.DataFrame([titanic_train["Pclass"],
                         encoded_Sex,
                         titanic_train["Age"]
 ]).T
@@ -373,10 +371,9 @@ titanic_train
 # 創造 dummy variables
 label_encoder = preprocessing.LabelEncoder()
 encoded_Sex = label_encoder.fit_transform(titanic_train["Sex"])
-encoded_Pclass = label_encoder.fit_transform(titanic_train["Pclass"])
 
 # 建立 train_X
-train_X = pd.DataFrame([encoded_Pclass,
+train_X = pd.DataFrame([titanic_train["Pclass"],
                         encoded_Sex,
                         titanic_train["Age"]
 ]).T

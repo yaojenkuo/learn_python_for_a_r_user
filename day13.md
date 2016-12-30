@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 13 天] 常用屬性或方法（2）
+# [第 13 天] 常用屬性或方法（2）ndarray
 
 ---
 
-我們在昨天的學習筆記討論了 Python 基本變數類型與資料結構可以應用的屬性或方法，除了基本的資料結構以外，你是否還記得 Python 可以透過引入 `numpy` 套件之後使用 **ndarray** 資料結構呢？當時我們在 [[R 語言使用者的 Python 學習筆記 - 第 05 天] 資料結構（2）](http://ithelp.ithome.com.tw/articles/10185093)提到，為了解決 Python 的 list 資料結構無法進行 element-wise 的運算，因此使用了 `numpy` 套件的 **ndarray**，我們勢必要瞭解她常見的屬性或方法。
+我們在昨天的學習筆記討論了 Python 基本變數類型與資料結構可以應用的屬性或方法，除了基本的資料結構以外，你是否還記得 Python 可以透過引入 `numpy` 套件之後使用 **ndarray** 資料結構呢？當時我們在 [[第 05 天] 資料結構（2）ndarray](http://ithelp.ithome.com.tw/articles/10185093) 提到，為了解決 Python 的 list 資料結構無法進行 element-wise 的運算，因此使用了 `numpy` 套件的 **ndarray**，我們勢必要瞭解她常見的屬性或方法。
 
 ## numpy 與 ndarray 的常用屬性或方法
 

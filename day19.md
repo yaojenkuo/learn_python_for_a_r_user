@@ -1,13 +1,13 @@
-# [R 語言使用者的 Python 學習筆記 - 第 19 天] 資料視覺化（2）
+# [第 19 天] 資料視覺化（2）Seaborn
 
 ---
 
-使用 **matplotlib** 建立一個圖表的概念是組裝它提供的基礎元件，像是圖表類型、圖例或者標籤等元件。 **seaborn** 套件是以 **matplotlib** 為基礎建構的高階繪圖套件，讓使用者更加輕鬆地建立圖表，我們可以將它視為是 **matplotlib** 的補強，如果你對 **matplotlib** 套件有點陌生，我推薦你閱讀 [[R 語言使用者的 Python 學習筆記 - 第 18 天] 資料視覺化](http://ithelp.ithome.com.tw/articles/10186484)。
+使用 **matplotlib** 建立一個圖表的概念是組裝它提供的基礎元件，像是圖表類型、圖例或者標籤等元件。 **Seaborn** 套件是以 **matplotlib** 為基礎建構的高階繪圖套件，讓使用者更加輕鬆地建立圖表，我們可以將它視為是 **matplotlib** 的補強，如果你對 **matplotlib** 套件有點陌生，我推薦你閱讀 [[第 18 天] 資料視覺化 matplotlib](http://ithelp.ithome.com.tw/articles/10186484)。
 
 > Seaborn is a library for making attractive and informative statistical graphics in Python. It is built on top of matplotlib and tightly integrated with the PyData stack, including support for numpy and pandas data structures and statistical routines from scipy and statsmodels.
 > [Seaborn: statistical data visualization](http://seaborn.pydata.org/index.html)
 
-我們今天試著使用看看 **seaborn** 套件並且也使用 R 語言的 **ggplot2** 套件來畫一些基本的圖形，包括：
+我們今天試著使用看看 **Seaborn** 套件並且也使用 R 語言的 **ggplot2** 套件來畫一些基本的圖形，包括：
 
 - 直方圖（Histogram）
 - 散佈圖（Scatter plot）
@@ -15,7 +15,7 @@
 - 長條圖（Bar plot）
 - 盒鬚圖（Box plot）
 
-**seaborn** 套件在我們的開發環境沒有安裝，但我們可以透過 `conda` 指令在終端機安裝。
+**Seaborn** 套件在我們的開發環境沒有安裝，但我們可以透過 `conda` 指令在終端機安裝。
 
 ```
 $ conda install -c anaconda seaborn=0.7.1
@@ -212,7 +212,7 @@ ggplot(normal_samples_df, aes(y = normal_samples, x = 1)) + geom_boxplot() + coo
 
 ## 小結
 
-第十九天我們練習使用 Python 的視覺化套件 **seaborn** 繪製基本的圖形，並且與 R 語言的 **ggplot2** 相互對照。
+第十九天我們練習使用 Python 的視覺化套件 **Seaborn** 繪製基本的圖形，並且與 R 語言的 **ggplot2** 相互對照。
 
 ## 參考連結
 

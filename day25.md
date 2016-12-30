@@ -1,15 +1,15 @@
-# [R 語言使用者的 Python 學習筆記 - 第 25 天] 機器學習（5）
+# [第 25 天] 機器學習（5）整體學習
 
 ---
 
-我們今天仍然繼續練習 Python 的 **scikit-learn** 機器學習套件，還記得在 [[R 語言使用者的 Python 學習筆記 - 第 23 天] 機器學習（3）](http://ithelp.ithome.com.tw/articles/10187191)中我們建立了決策樹與 k-Nearest Neighbors 分類器嗎？當我們使用一種分類器沒有辦法達到很良好的預測結果時，除了改使用其他類型的分類器，還有一個方式稱為**整體學習（Ensemble learning）**可以將數個分類器的預測結果綜合考慮，藉此達到顯著提升分類效果。
+我們今天仍然繼續練習 Python 的 **scikit-learn** 機器學習套件，還記得在 [[第 23 天] 機器學習（3）決策樹與 k-NN 分類器](http://ithelp.ithome.com.tw/articles/10187191)中我們建立了決策樹與 k-Nearest Neighbors 分類器嗎？當我們使用一種分類器沒有辦法達到很良好的預測結果時，除了改使用其他類型的分類器，還有一個方式稱為**整體學習（Ensemble learning）**可以將數個分類器的預測結果綜合考慮，藉此達到顯著提升分類效果。
 
 那麼整體學習的概念是什麼？以做一題是非題來說，假如我們使用一個銅板來決定答案要填是還是非，答對的機率是 50%，如果使用兩個銅板來決定答案，答對的機率是 1-(50%\*50%)=75%，如果銅板的數目來到 5 枚，答對的機率是 1-(50%)^5=96.875%。隨著銅板的個數增加，答對這一題是非題的機率也隨之增加，這大概就是整體學習的基本理念。
 
 > The goal of ensemble methods is to combine the predictions of several base estimators built with a given learning algorithm in order to improve generalizability / robustness over a single estimator.
 > [1.11. Ensemble methods - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/ensemble.html)
 
-以前述例子而言，銅板就是所謂的基本分類器（Base estimator），或稱為弱分類器（Weak classifier），基本分類器的選擇是任意的，在經典的整體學習演算法 **Bagging** 與 **AdaBoost** 中我們多數使用決策樹作為基本分類器。跟 [[R 語言使用者的 Python 學習筆記 - 第 22 天] 機器學習（2）](http://ithelp.ithome.com.tw/articles/10187047)練習 Logistic 迴歸一樣，我們繼續使用鐵達尼克號資料，分別在 Python 與 R 語言實作。
+以前述例子而言，銅板就是所謂的基本分類器（Base estimator），或稱為弱分類器（Weak classifier），基本分類器的選擇是任意的，在經典的整體學習演算法 **Bagging** 與 **AdaBoost** 中我們多數使用決策樹作為基本分類器。跟 [[第 22 天] 機器學習（2）複迴歸與 Logistic 迴歸](http://ithelp.ithome.com.tw/articles/10187047)練習 Logistic 迴歸一樣，我們繼續使用鐵達尼克號資料，分別在 Python 與 R 語言實作。
 
 ## Bagging
 
@@ -99,7 +99,7 @@ accuracy
 
 ## AdaBoost
 
-AdaBoost 同樣是基於數個基本分類器的整體學習演算法，跟前述 Bagging 演算法不同的地方在於，她在形成基本分類器時除了隨機生成，還會針對在前一個基本分類器中被分類錯誤的觀測值提高抽樣權重，使得該觀測值在下一個基本分類器形成時有更高機率被選入，藉此提高被正確分類的機率，簡單來說，她是個具有即時調節觀測值抽樣權重的進階 bagging 演算法。
+AdaBoost 同樣是基於數個基本分類器的整體學習演算法，跟前述 Bagging 演算法不同的地方在於，她在形成基本分類器時除了隨機生成，還會針對在前一個基本分類器中被分類錯誤的觀測值提高抽樣權重，使得該觀測值在下一個基本分類器形成時有更高機率被選入，藉此提高被正確分類的機率，簡單來說，她是個具有即時調節觀測值抽樣權重的進階 Bagging 演算法。
 
 ### Python
 

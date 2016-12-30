@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 11 天] 物件導向（2）
+# [第 11 天] 物件導向（2）Python
 
 ---
 
@@ -13,7 +13,7 @@
 
 一個**物件（Object）**可以包含**屬性（Attribute）**與**方法（Method）**，我們示範的物件是一個 data frame 叫做 `ironmen_df`，她有 `dtypes` 屬性與 `head()` 方法。
 
-```{python}
+```python
 import pandas as pd # 引用套件並縮寫為 pd
 
 groups = ["Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組"]
@@ -39,7 +39,7 @@ ironmen_df.head(n = 3) # ironmen_df 有 head() 方法
 
 我們使用 `class` 語法來定義類別，並使用大寫開頭（Capitalized）單字為類別命名，如果對於 `__init__` 方法與 `self` 參數感到困惑，就先記得這是一個特殊的 Python 方法，它用來幫助我們創造屬於這個類別的物件。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -55,7 +55,7 @@ print(Ironmen)
 
 一但類別 `Ironmen` 被定義完成，就可以使用 `Ironmen()` 當作建構子（Constructor）建立物件。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -73,7 +73,7 @@ print(modern_web)
 
 在物件名稱後面使用 `.` 接屬性名稱就可以使用。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -101,7 +101,7 @@ print(modern_web.__doc__)
 
 我們也可以使用內建函數 `dir()` 來列出物件全部的屬性。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -121,7 +121,7 @@ dir(modern_web)
 
 除了 `__init__` 方法之外利用 `def` 定義更多屬於這個類別的方法。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -150,7 +150,7 @@ dev_ops.print_info()
 
 新定義的類別可以繼承既有定義好的類別，可以沿用既有類別中的屬性及方法。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):
@@ -185,7 +185,7 @@ modern_web.print_info()
 
 可以根據原本的屬性或方法之上建立新的屬性或方法。
 
-```{python}
+```python
 class OnlyGroup:
     '''這是一個叫做 OnlyGroup 的類別''' # Doc string
     def __init__(self, group):
@@ -212,7 +212,7 @@ print(modern_web.participants)
 
 我們在先前繼承時成功增加一個方法 `print_articles()`，現在我們要試著在 Article 類別中改寫原本 Ironmen 類別中的 `print_info()` 方法。
 
-```{python}
+```python
 class Ironmen:
     '''這是一個叫做 Ironmen 的類別''' # Doc string
     def __init__(self, group, participants):

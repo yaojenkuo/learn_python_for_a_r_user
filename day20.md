@@ -1,18 +1,18 @@
-# [R 語言使用者的 Python 學習筆記 - 第 20 天] 資料視覺化（3）
+# [第 20 天] 資料視覺化（3）Bokeh
 
 ---
 
-我們前兩天討論的 **matplotlib** 與 **seaborn** 套件基本上已經可以滿足絕大多數的繪圖需求，唯一美中不足的一點是這些圖形都是靜態（Static）的，如果我們想要讓這些圖形帶有一點互動（Interactive），像是滑鼠游標移上去會顯示資料點的數據或可以縮放圖形等基於 JavaScript 的效果，我們可以在 Python 使用 **bokeh** 這個高階繪圖套件來達成。
+我們前兩天討論的 **matplotlib** 與 **Seaborn** 套件基本上已經可以滿足絕大多數的繪圖需求，唯一美中不足的一點是這些圖形都是靜態（Static）的，如果我們想要讓這些圖形帶有一點互動（Interactive），像是滑鼠游標移上去會顯示資料點的數據或可以縮放圖形等基於 JavaScript 的效果，我們可以在 Python 使用 **Bokeh** 這個高階繪圖套件來達成。
 
 > Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, and to extend this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
 > [Welcome to Bokeh - Bokeh 0.12.3 documentation](http://bokeh.pydata.org/en/latest/)
 
-以目前發展來看，資料視覺化套件會以 [d3.js](https://d3js.org/) 與其他基於 JavaScript 或 [d3.js](https://d3js.org/) 衍生的網頁專案領銜衝鋒，像是 [Leaflet](http://leafletjs.com/)、[c3.js](http://c3js.org/) 以及我們今天會使用的 [plotly](https://plot.ly/feed/) 等。Python 與 R 語言的視覺化套件則是努力讓使用者用精簡的方法與函數畫出具備互動效果的視覺化，如我們今天要討論的 **bokeh** 以及 **plotly**。如果你的工作是以資料視覺化為重，花時間與精神鑽研網頁前端技術與 [d3.js](https://d3js.org/) 是必須的投資。
+以目前發展來看，資料視覺化套件會以 [d3.js](https://d3js.org/) 與其他基於 JavaScript 或 [d3.js](https://d3js.org/) 衍生的網頁專案領銜衝鋒，像是 [Leaflet](http://leafletjs.com/)、[c3.js](http://c3js.org/) 以及我們今天會使用的 [plotly](https://plot.ly/feed/) 等。Python 與 R 語言的視覺化套件則是努力讓使用者用精簡的方法與函數畫出具備互動效果的視覺化，如我們今天要討論的 **Bokeh** 以及 **Plotly**。如果你的工作是以資料視覺化為重，花時間與精神鑽研網頁前端技術與 [d3.js](https://d3js.org/) 是必須的投資。
 
 > Visualizations built on web technologies (that is, JavaScript-based) appear to be the inevitable future.
 > [Wes McKinney](http://wesmckinney.com/)
 
-我們今天試著使用 **bokeh** 與 R 語言的 **plotly** 套件來畫一些基本的圖形，包括：
+我們今天試著使用 **Bokeh** 與 R 語言的 **Plotly** 套件來畫一些基本的圖形，包括：
 
 - 直方圖（Histogram）
 - 散佈圖（Scatter plot）
@@ -20,7 +20,7 @@
 - 長條圖（Bar plot）
 - 盒鬚圖（Box plot）
 
-我下載的 [Anaconda](https://www.continuum.io/why-anaconda) 版本已經將 **bokeh** 安裝好了，如果你的版本沒有，只要在終端機執行這段程式即可。
+我下載的 [Anaconda](https://www.continuum.io/why-anaconda) 版本已經將 **Bokeh** 安裝好了，如果你的版本沒有，只要在終端機執行這段程式即可。
 
 ```
 $ conda install -c anaconda bokeh=0.12.3
@@ -45,7 +45,7 @@ show(hist)
 
 ### R 語言
 
-使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **plotly** 圖形。
+使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **Plotly** 圖形。
 
 ```
 library(ggplot2)
@@ -86,7 +86,7 @@ show(scatter)
 
 ### R 語言
 
-使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **plotly** 圖形。
+使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **Plotly** 圖形。
 
 ```
 library(ggplot2)
@@ -125,7 +125,7 @@ show(line)
 
 ### R 語言
 
-使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **plotly** 圖形。
+使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **Plotly** 圖形。
 
 ```
 library(ggplot2)
@@ -162,7 +162,7 @@ show(bar)
 
 ### R 語言
 
-使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **plotly** 圖形。
+使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **Plotly** 圖形。
 
 ```
 library(ggplot2)
@@ -201,7 +201,7 @@ show(box)
 
 ### R 語言
 
-使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **plotly** 圖形。
+使用 `ggplotly()` 函數就可以將 **ggplot2** 套件所繪製的基本圖形轉換為 **Plotly** 圖形。
 
 ```
 library(ggplot2)
@@ -215,7 +215,7 @@ ggplotly(box)
 
 ## 小結
 
-第二十天我們練習使用 Python 的視覺化套件 **bokeh** 繪製基本的圖形，並且在 R 語言中使用 `plotly` 套件的 `ggplotly()` 函數將 **ggplot2** 的圖形轉換為互動的 **plotly** 圖形。
+第二十天我們練習使用 Python 的視覺化套件 **Bokeh** 繪製基本的圖形，並且在 R 語言中使用 `plotly` 套件的 `ggplotly()` 函數將 **ggplot2** 的圖形轉換為互動的 **Plotly** 圖形。
 
 ## 參考連結
 

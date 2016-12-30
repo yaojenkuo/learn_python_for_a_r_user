@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 28 天] 深度學習（2）
+# [第 28 天] 深度學習（2）TensorBoard
 
 ---
 
-我們今天繼續練習深度學習的套件 **TensorFlow**，在[昨天](http://ithelp.ithome.com.tw/articles/10187702)的第一個實作中我們建立一個很單純的神經網路，利用梯度遞減（Gradient descent）的演算法去逼近線性迴歸模型的係數與截距，但是我們很快就有了疑問：一直提到的建立運算元（Graphs）究竟在哪裡？是看得到的嗎？答案是可以的，我們可以利用 **TensorBoard** 來視覺化神經網路。
+我們今天繼續練習神經網絡的套件 **TensorFlow**，在[昨天](http://ithelp.ithome.com.tw/articles/10187702)的第一個實作中我們建立一個很單純的神經網絡，利用梯度遞減（Gradient descent）的演算法去逼近線性迴歸模型的係數與截距，但是我們很快就有了疑問：一直提到的建立運算元（Graphs）究竟在哪裡？是看得到的嗎？答案是可以的，我們可以利用 **TensorBoard** 來視覺化神經網絡。
 
 > The computations you'll use TensorFlow for - like training a massive deep neural network - can be complex and confusing. To make it easier to understand, debug, and optimize TensorFlow programs, we've included a suite of visualization tools called TensorBoard. You can use TensorBoard to visualize your TensorFlow graph, plot quantitative metrics about the execution of your graph, and show additional data like images that pass through it.
 > [TensorBoard: Visualizing Learning | TensorFlow](https://www.tensorflow.org/how_tos/summaries_and_tensorboard/)
@@ -76,7 +76,7 @@ sess.close()
 
 ## 視覺化
 
-接著我們要在模組化的程式中使用 `with tf.name_scope():` 為每個運算元命名，然後在神經網路運算初始之後，利用 `tf.summary.FileWriter()` 將視覺化檔案輸出。
+接著我們要在模組化的程式中使用 `with tf.name_scope():` 為每個運算元命名，然後在神經網絡運算初始之後，利用 `tf.summary.FileWriter()` 將視覺化檔案輸出。
 
 ```python
 import tensorflow as tf
@@ -145,7 +145,7 @@ sess.close()
 $ tensorboard --logdir='TensorBoard/'
 ```
 
-等我們看到系統回覆之後，就可以打開瀏覽器，在網址列輸入：localhost:6006 ，就可以在 **Graphs** 頁籤下看到神經網路圖。
+等我們看到系統回覆之後，就可以打開瀏覽器，在網址列輸入：localhost:6006 ，就可以在 **Graphs** 頁籤下看到神經網絡圖。
 
 ![day2803](https://storage.googleapis.com/2017_ithome_ironman/day2803.png)
 
@@ -290,7 +290,7 @@ sess.close()
 
 ## 小結
 
-第二十八天我們繼續練習 Python 的深度學習套件 **TensorFlow**，延續昨天的練習程式，使用 **TensorBoard** 來進行神經網路模型的視覺化。
+第二十八天我們繼續練習 Python 的神經網絡套件 **TensorFlow**，延續昨天的練習程式，使用 **TensorBoard** 來進行神經網絡模型的視覺化。
 
 ## 參考連結
 

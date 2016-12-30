@@ -1,4 +1,4 @@
-# [R 語言使用者的 Python 學習筆記 - 第 02 天] 基本變數類型
+# [第 02 天] 基本變數類型
 
 ---
 
@@ -23,7 +23,7 @@ R 語言回傳變數類型的函數是 `class()`，如果不清楚這個函數�
 
 我們依序在 RStudio 的命令列輸入下列指令就可以看到變數類型被回傳。 
 
-```{r}
+```
 class(5) # "numeric"
 class(5.5) # "numeric"
 class(5L) # "integer"
@@ -39,7 +39,7 @@ class("2017 ithome ironman") # "character"
 
 ## Python 的基本變數類型
 
-從終端機開啟 Jupyter Notebook 然後新增一個 Python 3 的 Notebook。如果你對這段文字有些疑問，我推薦你看第一天的學習筆記：[建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+從終端機開啟 Jupyter Notebook 然後新增一個 Python 3 的 Notebook。如果你對這段文字有些疑問，我推薦你看第一天的學習筆記：[[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
 
 Python 的基本變數類型分為以下這幾類：
 
@@ -56,7 +56,7 @@ Python 回傳變數類型的函數是 `type()`，如果不清楚這個函數有�
 
 我們在 cell 輸入下列指令然後執行印出變數類型，如果你不清楚怎麼執行 cell 中的指令，我同樣也推薦你看第一天的學習筆記：[建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
 
-```{python}
+```python
 print(type(5)) # 'int'
 print(type(5.5)) # 'float'
 print(type(5 + 3j)) # 'complex'
@@ -73,7 +73,7 @@ print(type("2017 ithome ironman")) # 'str'
 
 R 語言以 1 儲存 `TRUE`，0 儲存 `FALSE`，所以我們可以彈性地運算數值和邏輯值，但是文字就不能夠彈性地運算。
 
-```{r}
+```
 1 == TRUE # TRUE
 0L == FALSE # TRUE
 1.2 + TRUE # 2.2
@@ -85,7 +85,7 @@ R 語言以 1 儲存 `TRUE`，0 儲存 `FALSE`，所以我們可以彈性地運�
 
 Python 儲存布林值的方式與 R 語言相同，因此也可以彈性地運算數值和布林值，除此以外，在文字上運算的彈性較 R 語言更大一些，可以利用 `+` 進行合併，以及利用 `*` 進行複製。
 
-```{python}
+```python
 print(1.0 == True) # True
 print(0 == False) # True
 print(1.2 + True) # 2.2

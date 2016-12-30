@@ -1,8 +1,8 @@
-# [R 語言使用者的 Python 學習筆記 - 第 18 天] 資料視覺化
+# [第 18 天] 資料視覺化 matplotlib
 
 ---
 
-在我們昨天的文章 [[R 語言使用者的 Python 學習筆記 - 第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)有提到，進行資料角力（Data wrangling）的目的多半是為了後續的資料視覺化或者建立機器學習的模型。R 語言使用者的資料視覺化工具有靜態的 **Base plotting system**（R 語言內建的繪圖功能）跟 **ggplot2** 套件，與動態的 **plotly** 套件。而 Python 的視覺化套件有靜態的 **matplotlib** 跟 **seaborn** 套件，與動態的 **bokeh** 套件。
+在我們昨天的文章 [[第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)有提到，進行資料角力（Data wrangling）的目的多半是為了後續的資料視覺化或者建立機器學習的模型。R 語言使用者的資料視覺化工具有靜態的 **Base plotting system**（R 語言內建的繪圖功能）跟 **ggplot2** 套件，與動態的 **plotly** 套件。而 Python 的視覺化套件有靜態的 **matplotlib** 跟 **seaborn** 套件，與動態的 **bokeh** 套件。
 
 我們今天試著使用看看 **matplotlib** 並且也使用 R 語言的 **Base plotting system** 來畫一些基本的圖形，包括：
 

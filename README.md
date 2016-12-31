@@ -50,3 +50,12 @@
 - [[第 28 天] 深度學習（2）TensorBoard](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day28.md)
 - [[第 29 天] 深度學習（3）MNIST 手寫數字辨識](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day29.md)
 - [[第 30 天] 深度學習（4）卷積神經網絡與鐵人賽總結](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day30.md)
+
+## 版本
+
+- Python 3.5.2
+- Anaconda 4.2.0
+- scikit-learn 0.18
+- TensorFlow r0.12
+
+&copy; Tony Yao-Jen Kuo 2016

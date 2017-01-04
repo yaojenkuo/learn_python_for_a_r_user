@@ -2,7 +2,7 @@
 
 ---
 
-除了 Python 基本的資料結構（list，tuple 與 dictionary）以及昨天學習筆記提到的 ndarray，還記得我們在 [[第 05 天] 資料結構（2）ndarray](http://ithelp.ithome.com.tw/articles/10185182) 提到，為了讓 Python 也能夠使用類似 R 語言的 data frame 資料結構而使用了 `pandas` 套件的 data frame 嗎？我們勢必也要瞭解她常見的屬性或方法。
+除了 Python 基本的資料結構（list，tuple 與 dictionary）以及昨天學習筆記提到的 ndarray，還記得我們在 [[第 06 天] 資料結構（3）Data Frame](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day06.md) 提到，為了讓 Python 也能夠使用類似 R 語言的 data frame 資料結構而使用了 `pandas` 套件的 data frame 嗎？我們勢必也要瞭解她常見的屬性或方法。
 
 ## Pandas 與 data frame 的常用屬性或方法
 

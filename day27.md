@@ -12,7 +12,7 @@
 
 ## 安裝 TensorFlow
 
-我們的開發環境是 [Anaconda](https://www.continuum.io/downloads)，如果你對本系列文章的開發環境有興趣，可以參照 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+我們的開發環境是 [Anaconda](https://www.continuum.io/downloads)，如果你對本系列文章的開發環境有興趣，可以參照 [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。
 
 ### 第一步（pip 安裝）
 

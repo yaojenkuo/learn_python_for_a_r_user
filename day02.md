@@ -39,7 +39,7 @@ class("2017 ithome ironman") # "character"
 
 ## Python 的基本變數類型
 
-從終端機開啟 Jupyter Notebook 然後新增一個 Python 3 的 Notebook。如果你對這段文字有些疑問，我推薦你看第一天的學習筆記：[[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+從終端機開啟 Jupyter Notebook 然後新增一個 Python 3 的 Notebook。如果你對這段文字有些疑問，我推薦你看第一天的學習筆記：[[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。
 
 Python 的基本變數類型分為以下這幾類：
 
@@ -54,7 +54,7 @@ Python 回傳變數類型的函數是 `type()`，如果不清楚這個函數有�
 
 ![day0203](https://storage.googleapis.com/2017_ithome_ironman/day0203.png)
 
-我們在 cell 輸入下列指令然後執行印出變數類型，如果你不清楚怎麼執行 cell 中的指令，我同樣也推薦你看第一天的學習筆記：[建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+我們在 cell 輸入下列指令然後執行印出變數類型，如果你不清楚怎麼執行 cell 中的指令，我同樣也推薦你看第一天的學習筆記：[[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。
 
 ```python
 print(type(5)) # 'int'

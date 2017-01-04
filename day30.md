@@ -22,7 +22,7 @@ Source: [Artificial Inteligence](https://leonardoaraujosantos.gitbooks.io/artifi
 ![day3002](https://storage.googleapis.com/2017_ithome_ironman/day3002.jpeg)
 Source: [What is max pooling in convolutional neural networks?](https://www.quora.com/What-is-max-pooling-in-convolutional-neural-networks)
 
-今天實作的深度練習模型除了導入 **Convolution** 與 **Max-pooling** 以外，還有三個地方與[昨天](http://ithelp.ithome.com.tw/articles/10187912)不同：
+今天實作的深度練習模型除了導入 **Convolution** 與 **Max-pooling** 以外，還有三個地方與[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day29.md)不同：
 
 ### 不同的 Activation Function
 

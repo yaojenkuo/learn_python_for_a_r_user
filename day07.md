@@ -4,7 +4,7 @@
 
 截至 2016-12-07 上午 11 時第 8 屆 iT 邦幫忙各組的鐵人分別是 49、8、12、12、6 與 61 人，我們想要在命令列上一一輸出這六組的鐵人數。
 
-在不撰寫迴圈的情況下，我們還是可以先將這六個數字存在一個 R 語言的 vector 或 Python 的 list，然後再土法煉鋼依照索引值一一把結果輸出在命令列，如果你對這兩個資料結構有一點疑惑，我推薦你參考本系列文章的[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。
+在不撰寫迴圈的情況下，我們還是可以先將這六個數字存在一個 R 語言的 vector 或 Python 的 list，然後再土法煉鋼依照索引值一一把結果輸出在命令列，如果你對這兩個資料結構有一點疑惑，我推薦你參考本系列文章的[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)。
 
 ```
 ironmen <- c(49, 8, 12, 12, 6, 61)
@@ -110,7 +110,7 @@ print(index) # 把迴圈的迭代器（iterator）或稱游標（cursor）最後
 
 ![day0706](https://storage.googleapis.com/2017_ithome_ironman/day0706.png)
 
-在撰寫迴圈的時候你會發現到跟 R 語言因為索引值起始值不同（R 語言的資料結構索引值由 1 起始，Python 由 0 起始）而做出相對應的調整，另外，如果你對於 while 迴圈中 `index += 1` 的寫法感到陌生，我推薦你參考本系列文章的[[第 03 天] 變數類型的轉換](http://ithelp.ithome.com.tw/articles/10184901)。
+在撰寫迴圈的時候你會發現到跟 R 語言因為索引值起始值不同（R 語言的資料結構索引值由 1 起始，Python 由 0 起始）而做出相對應的調整，另外，如果你對於 while 迴圈中 `index += 1` 的寫法感到陌生，我推薦你參考本系列文章的[[第 03 天] 變數類型的轉換](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day03.md)。
 
 ## R 語言的流程控制
 

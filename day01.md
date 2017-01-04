@@ -6,6 +6,55 @@
 
 這系列文章的視角是一個 R 語言使用者去學習 Python 資料科學的應用，希望讓還沒有開始學習的人對這兩個程式語言有一點 prior knowledge，藉由閱讀這系列文章，跟她們都稍微相處一下看看氛圍如何，再決定要選哪一個作為切入資料科學應用的程式語言。
 
+## 學習筆記的脈絡
+
+這份學習筆記從一個 R 語言使用者學習 Python 在資料科學的應用，並且相互對照的角度出發，整份學習筆記可以分為五大主題：
+
+### 基礎
+
+- [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)
+- [[第 02 天] 基本變數類型](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day02.md)
+- [[第 03 天] 變數類型的轉換](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day03.md)
+- [[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)
+- [[第 05 天] 資料結構（2）ndarray](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day05.md)
+- [[第 06 天] 資料結構（3）Data Frame](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day06.md)
+- [[第 07 天] 迴圈與流程控制](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day07.md)
+- [[第 08 天] 函數](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day08.md)
+- [[第 09 天] 函數（2）](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day09.md)
+- [[第 10 天] 物件導向 R 語言](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day10.md)
+- [[第 11 天] 物件導向（2）Python](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day11.md)
+
+### 基礎應用
+
+- [[第 12 天] 常用屬性或方法 變數與基本資料結構](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day12.md)
+- [[第 13 天] 常用屬性或方法（2）ndarray](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day13.md)
+- [[第 14 天] 常用屬性或方法（3）Data Frame](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day14.md)
+- [[第 15 天] 載入資料](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day15.md)
+- [[第 16 天] 網頁解析](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day16.md)
+- [[第 17 天] 資料角力](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day17.md)
+
+### 視覺化
+
+- [[第 18 天] 資料視覺化 matplotlib](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md)
+- [[第 19 天] 資料視覺化（2）Seaborn](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day19.md)
+- [[第 20 天] 資料視覺化（3）Bokeh](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day20.md) 
+
+### 機器學習
+
+- [[第 21 天] 機器學習 玩具資料與線性迴歸](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day21.md)
+- [[第 22 天] 機器學習（2）複迴歸與 Logistic 迴歸](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day22.md)
+- [[第 23 天] 機器學習（3）決策樹與 k-NN 分類器](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day23.md)
+- [[第 24 天] 機器學習（4）分群演算法](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day24.md)
+- [[第 25 天] 機器學習（5）整體學習](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day25.md)
+- [[第 26 天] 機器學習（6）隨機森林與支持向量機](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day26.md)
+
+### 深度學習
+
+- [[第 27 天] 深度學習 TensorFlow](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day27.md)
+- [[第 28 天] 深度學習（2）TensorBoard](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day28.md)
+- [[第 29 天] 深度學習（3）MNIST 手寫數字辨識](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day29.md)
+- [[第 30 天] 深度學習（4）卷積神經網絡與鐵人賽總結](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day30.md)
+
 ## 建立開發環境
 
 R 語言的使用者可以在 [CRAN](https://cran.r-project.org/) 下載 R，然後再去 [RStudio](https://www.rstudio.com/products/rstudio/download3/) 下載這個好用的 IDE，兩者安裝完畢後就建立好了 R 語言的開發環境。

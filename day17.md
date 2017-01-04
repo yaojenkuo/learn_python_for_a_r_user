@@ -2,7 +2,7 @@
 
 ---
 
-我們現在面對表格式資料（Tabular data），Excel 試算表，JSON 或者網頁資料時有了相當程度的自信，透過 `pandas`、`requests` 與 `BeautifulSoup` 套件我們可以輕鬆地將不同格式資料載入 Python 的工作環境中。如果你對於將資料載入 Python 還不太清楚，我推薦你閱讀前兩天的內容 [[第 15 天] 載入資料](http://ithelp.ithome.com.tw/articles/10185993)與 [[第 16 天] 網頁解析](http://ithelp.ithome.com.tw/articles/10186119)。
+我們現在面對表格式資料（Tabular data），Excel 試算表，JSON 或者網頁資料時有了相當程度的自信，透過 `pandas`、`requests` 與 `BeautifulSoup` 套件我們可以輕鬆地將不同格式資料載入 Python 的工作環境中。如果你對於將資料載入 Python 還不太清楚，我推薦你閱讀前兩天的內容 [[第 15 天] 載入資料](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day15.md)與 [[第 16 天] 網頁解析](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day16.md)。
 
 載入資料之後，接踵而來的就是資料整理（Data manipulation）的差事，或稱資料改寫（Data munging），抑或是一個比較潮的詞彙：資料角力（Data wrangling）。資料角力的目的是為了視覺化或者機器學習模型需求，必須將資料整理成合乎需求的格式。
 

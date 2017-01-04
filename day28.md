@@ -2,14 +2,14 @@
 
 ---
 
-我們今天繼續練習神經網絡的套件 **TensorFlow**，在[昨天](http://ithelp.ithome.com.tw/articles/10187702)的第一個實作中我們建立一個很單純的神經網絡，利用梯度遞減（Gradient descent）的演算法去逼近線性迴歸模型的係數與截距，但是我們很快就有了疑問：一直提到的建立運算元（Graphs）究竟在哪裡？是看得到的嗎？答案是可以的，我們可以利用 **TensorBoard** 來視覺化神經網絡。
+我們今天繼續練習神經網絡的套件 **TensorFlow**，在[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day27.md)的第一個實作中我們建立一個很單純的神經網絡，利用梯度遞減（Gradient descent）的演算法去逼近線性迴歸模型的係數與截距，但是我們很快就有了疑問：一直提到的建立運算元（Graphs）究竟在哪裡？是看得到的嗎？答案是可以的，我們可以利用 **TensorBoard** 來視覺化神經網絡。
 
 > The computations you'll use TensorFlow for - like training a massive deep neural network - can be complex and confusing. To make it easier to understand, debug, and optimize TensorFlow programs, we've included a suite of visualization tools called TensorBoard. You can use TensorBoard to visualize your TensorFlow graph, plot quantitative metrics about the execution of your graph, and show additional data like images that pass through it.
 > [TensorBoard: Visualizing Learning | TensorFlow](https://www.tensorflow.org/how_tos/summaries_and_tensorboard/)
 
 ## 整理程式
 
-在視覺化之前，我們先用較模組化的寫法：[MorvanZhou@GitHub](https://github.com/MorvanZhou/tutorials/blob/master/tensorflowTUT/tf15_tensorboard/full_code.py) 的範例程式改寫[昨天](http://ithelp.ithome.com.tw/articles/10187702)的程式。
+在視覺化之前，我們先用較模組化的寫法：[MorvanZhou@GitHub](https://github.com/MorvanZhou/tutorials/blob/master/tensorflowTUT/tf15_tensorboard/full_code.py) 的範例程式改寫[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day27.md)的程式。
 
 ### 改寫架構
 

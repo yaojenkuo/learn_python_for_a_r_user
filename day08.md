@@ -2,14 +2,14 @@
 
 ---
 
-早在 [[第 02 天] 基本變數類型](http://ithelp.ithome.com.tw/articles/10184855)我們就開始使用 Python 的內建函數（generic functions），像是我們使用 `help()` 函數查詢文件以及使用 `type()` 函數來觀察我們的變數類型為 str，int 或者 bool。對於 R 語言使用者而言，函數可是我們的最愛，因為本質上 R 語言是一個函數型編程語言（functional programming language）。
+早在 [[第 02 天] 基本變數類型](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day02.md)我們就開始使用 Python 的內建函數（generic functions），像是我們使用 `help()` 函數查詢文件以及使用 `type()` 函數來觀察我們的變數類型為 str，int 或者 bool。對於 R 語言使用者而言，函數可是我們的最愛，因為本質上 R 語言是一個函數型編程語言（functional programming language）。
 
 > (Almost) everything is a function call.
 > By [John Chambers](https://en.wikipedia.org/wiki/John_Chambers_(statistician))
 
 ## 應用內建函數
 
-截至 2016-12-08 上午 8 時第 8 屆 iT 邦幫忙各組的鐵人分別是 50、8、16、12、6 與 62 人，我們將這個資訊存在一個 R 語言的 vector 或 Python 的 list，然後對這個資料結構使用一些內建函數。如果你對這兩個資料結構有點疑惑，我推薦你參考本系列文章的 [[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。
+截至 2016-12-08 上午 8 時第 8 屆 iT 邦幫忙各組的鐵人分別是 50、8、16、12、6 與 62 人，我們將這個資訊存在一個 R 語言的 vector 或 Python 的 list，然後對這個資料結構使用一些內建函數。如果你對這兩個資料結構有點疑惑，我推薦你參考本系列文章的 [[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)。
 
 ```
 ironmen <- c(50, 8, 16, 12, 6, 62)
@@ -55,7 +55,7 @@ help(sorted)
 
 ![day0804](https://storage.googleapis.com/2017_ithome_ironman/day0804.png)
 
-為了讓程式更加有組織性，更好管理與具備重複使用性，除了使用內建函數以外我們得要學習自訂函數。在自訂函數時候我們會使用**迴圈**與**流程控制**，如果你對這兩個概念有點疑惑，我推薦你參考本系列文章的 [[第 07 天] 迴圈與流程控制](http://ithelp.ithome.com.tw/articles/10185299)。
+為了讓程式更加有組織性，更好管理與具備重複使用性，除了使用內建函數以外我們得要學習自訂函數。在自訂函數時候我們會使用**迴圈**與**流程控制**，如果你對這兩個概念有點疑惑，我推薦你參考本系列文章的 [[第 07 天] 迴圈與流程控制](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day07.md)。
 
 ## R 語言的自訂函數
 

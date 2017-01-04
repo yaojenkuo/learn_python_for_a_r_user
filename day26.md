@@ -2,7 +2,7 @@
 
 ---
 
-我們今天繼續練習 Python 的 **scikit-learn** 機器學習套件，延續 [[第 25 天] 機器學習（5）整體學習](http://ithelp.ithome.com.tw/articles/10187452)，討論倍受歡迎的分類器**隨機森林（Random forest）**與**支持向量機（Support vector machine，SVM）**。
+我們今天繼續練習 Python 的 **scikit-learn** 機器學習套件，延續 [[第 25 天] 機器學習（5）整體學習](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day25.md)，討論倍受歡迎的分類器**隨機森林（Random forest）**與**支持向量機（Support vector machine，SVM）**。
 
 隨機森林分類器屬於建構於決策樹之上的整體學習應用，每一個基本分類器都是一個決策樹。這時我們心中就冒出一個疑問：隨機森林跟以決策樹為基本分類器構成的 Bagging 有什麼不同？最大的差異應該就是**隨機**的部分，以決策樹為基本分類器構成的 Bagging 的 Boostrap sampling 只有應用在列方向（觀測值方向）；隨機森林的 bootstrap sampling 則是同時應用在列方向（觀測值方向）與欄方向（變數方向）。
 

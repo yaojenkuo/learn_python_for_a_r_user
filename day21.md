@@ -2,7 +2,7 @@
 
 ---
 
-我們在 [[第 17 天] 資料角力](http://ithelp.ithome.com.tw/articles/10186310)提過，資料角力的目的是為了視覺化或者機器學習模型需求，必須將資料整理成合乎需求的格式。資料視覺化聽來直觀，那麼關於機器學習呢？我很喜歡[林軒田](http://www.csie.ntu.edu.tw/~htlin/)老師在[機器學習基石](https://www.youtube.com/watch?v=sS4523miLnw&list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf&index=2)簡單明嘹的解釋：
+我們在 [[第 17 天] 資料角力](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day17.md)提過，資料角力的目的是為了視覺化或者機器學習模型需求，必須將資料整理成合乎需求的格式。資料視覺化聽來直觀，那麼關於機器學習呢？我很喜歡[林軒田](http://www.csie.ntu.edu.tw/~htlin/)老師在[機器學習基石](https://www.youtube.com/watch?v=sS4523miLnw&list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf&index=2)簡單明嘹的解釋：
 
 > 我們從小是怎麼樣辨認一棵樹的，是爸爸媽媽告訴我們一百條規則來定義嗎？其實不是的，很大一部分是透過我們自己的觀察很多的樹與不是樹之後，得到並且內化了辨認一棵樹的技巧，機器學習想要做的就是一樣的事情。
 > [林軒田](http://www.csie.ntu.edu.tw/~htlin/)
@@ -157,7 +157,7 @@ predicted_sales
 
 ## 線性迴歸視覺化
 
-我們可以使用 [[R 語言使用者的 Python 學習筆記 - 第 18 天] 資料視覺化](http://ithelp.ithome.com.tw/articles/10186484)提過的 Python `matplotlib` 套件與 R 語言的 **Base plotting system**。
+我們可以使用 [[第 18 天] 資料視覺化 matplotlib](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md) 提過的 Python `matplotlib` 套件與 R 語言的 **Base plotting system**。
 
 ### Python
 

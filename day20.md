@@ -20,7 +20,7 @@
 - 長條圖（Bar plot）
 - 盒鬚圖（Box plot）
 
-我下載的 [Anaconda](https://www.continuum.io/why-anaconda) 版本已經將 **Bokeh** 安裝好了，如果你的版本沒有，只要在終端機執行這段程式即可。
+我下載的 [Anaconda](https://www.continuum.io/downloads) 版本已經將 **Bokeh** 安裝好了，如果你的版本沒有，只要在終端機執行這段程式即可。
 
 ```
 $ conda install -c anaconda bokeh=0.12.3

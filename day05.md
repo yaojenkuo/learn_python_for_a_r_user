@@ -39,7 +39,7 @@ print(articles)
 
 ## 第一個 numpy 應用
 
-我們來使用 `numpy` 套件中的 **ndarray** 解決先前遭遇到的問題。由於我們的開發環境安裝 [Anaconda](https://www.continuum.io/) ，所以我們不需要再去下載與安裝 `numpy` 套件，我們只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
+我們來使用 `numpy` 套件中的 **ndarray** 解決先前遭遇到的問題。由於我們的開發環境安裝 [Anaconda](https://www.continuum.io/) ，所以我們不需要再去下載與安裝 `numpy` 套件，我們只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。）
 
 ```python
 import numpy # 引用套件

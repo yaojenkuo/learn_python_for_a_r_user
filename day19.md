@@ -2,7 +2,7 @@
 
 ---
 
-使用 **matplotlib** 建立一個圖表的概念是組裝它提供的基礎元件，像是圖表類型、圖例或者標籤等元件。 **Seaborn** 套件是以 **matplotlib** 為基礎建構的高階繪圖套件，讓使用者更加輕鬆地建立圖表，我們可以將它視為是 **matplotlib** 的補強，如果你對 **matplotlib** 套件有點陌生，我推薦你閱讀 [[第 18 天] 資料視覺化 matplotlib](http://ithelp.ithome.com.tw/articles/10186484)。
+使用 **matplotlib** 建立一個圖表的概念是組裝它提供的基礎元件，像是圖表類型、圖例或者標籤等元件。 **Seaborn** 套件是以 **matplotlib** 為基礎建構的高階繪圖套件，讓使用者更加輕鬆地建立圖表，我們可以將它視為是 **matplotlib** 的補強，如果你對 **matplotlib** 套件有點陌生，我推薦你閱讀 [[第 18 天] 資料視覺化 matplotlib](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md)。
 
 > Seaborn is a library for making attractive and informative statistical graphics in Python. It is built on top of matplotlib and tightly integrated with the PyData stack, including support for numpy and pandas data structures and statistical routines from scipy and statsmodels.
 > [Seaborn: statistical data visualization](http://seaborn.pydata.org/index.html)

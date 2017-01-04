@@ -2,7 +2,7 @@
 
 ---
 
-我們今天要繼續使用 **scikit-learn** 機器學習套件延續[昨天](http://ithelp.ithome.com.tw/articles/10186905)的線性迴歸，練習一個複迴歸以及一個 Logistic 迴歸。如果你還記得 [scikit-learn 首頁](http://scikit-learn.org/stable/index.html) 的應用領域，很明顯線性迴歸與複迴歸是屬於**迴歸（Regression）**應用領域，但是 Logistic 迴歸呢？她好像應當被歸類在**分類（Classification）**應用領域，但名字中又有迴歸兩個字？從 [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) 我們瞭解 Logistic 迴歸是預測機率的方法，屬於二元分類的應用領域。
+我們今天要繼續使用 **scikit-learn** 機器學習套件延續[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day21.md)的線性迴歸，練習一個複迴歸以及一個 Logistic 迴歸。如果你還記得 [scikit-learn 首頁](http://scikit-learn.org/stable/index.html) 的應用領域，很明顯線性迴歸與複迴歸是屬於**迴歸（Regression）**應用領域，但是 Logistic 迴歸呢？她好像應當被歸類在**分類（Classification）**應用領域，但名字中又有迴歸兩個字？從 [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) 我們瞭解 Logistic 迴歸是預測機率的方法，屬於二元分類的應用領域。
 
 > Logistic regression, despite its name, is a linear model for classification rather than regression.
 > [Generalized Linear Models - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)

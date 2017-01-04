@@ -11,7 +11,7 @@ R 語言使用者對於 `rvest` 套件在網頁解析的便利性愛不釋手，
 
 ## 準備工作
 
-除了 `BeautifulSoup` 套件以外，我們還需要搭配使用 `lxml` 套件與 `requests` 套件。由於我們的開發環境是安裝 [Anaconda]()，所以這些套件都不需要再另外下載與安裝，只要進行一貫的 `import` 就好。如果對於開發環境的部分有興趣，我推薦你參考 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。
+除了 `BeautifulSoup` 套件以外，我們還需要搭配使用 `lxml` 套件與 `requests` 套件。由於我們的開發環境是安裝 [Anaconda](https://www.continuum.io/downloads)，所以這些套件都不需要再另外下載與安裝，只要進行一貫的 `import` 就好。如果對於開發環境的部分有興趣，我推薦你參考 [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。
 
 ### lxml 套件
 

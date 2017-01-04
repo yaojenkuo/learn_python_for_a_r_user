@@ -18,11 +18,11 @@ View(ironmen_df)
 
 ![day0602](https://storage.googleapis.com/2017_ithome_ironman/day0602.png)
 
-如果我們希望在 Python 中也能夠使用 data frame，我們得仰賴 `pandas` 套件。與第五天討論的 `numpy` 套件一樣，由於我們的開發環境是安裝 [Anaconda](https://www.continuum.io/)，所以不需要再去下載與安裝 `pandas` 套件，只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](http://ithelp.ithome.com.tw/articles/10184561)。）
+如果我們希望在 Python 中也能夠使用 data frame，我們得仰賴 `pandas` 套件。與第五天討論的 `numpy` 套件一樣，由於我們的開發環境是安裝 [Anaconda](https://www.continuum.io/)，所以不需要再去下載與安裝 `pandas` 套件，只需要在程式的上方引用即可（關於本系列文章的 Python 開發環境安裝請參考 [[第 01 天] 建立開發環境與計算機應用](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day01.md)。）
 
 ## 第一個 pandas 應用
 
-我們引用 `pandas` 套件之後依照使用慣例將它縮寫為 `pd`，最基本建立 data frame 的方式是利用 `pandas` 套件的 `DataFrame()` 方法將一個 dictionary 的資料結構轉換為 data frame（如果你對於 dictionary 資料結構感到陌生，我推薦你閱讀[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)。）
+我們引用 `pandas` 套件之後依照使用慣例將它縮寫為 `pd`，最基本建立 data frame 的方式是利用 `pandas` 套件的 `DataFrame()` 方法將一個 dictionary 的資料結構轉換為 data frame（如果你對於 dictionary 資料結構感到陌生，我推薦你閱讀[[[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)。）
 
 ```python
 import pandas as pd # 引用套件並縮寫為 pd

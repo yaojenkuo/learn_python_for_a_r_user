@@ -2,7 +2,7 @@
 
 ---
 
-我們今天要繼續練習 **scikit-learn** 機器學習套件，還記得在[昨天](http://ithelp.ithome.com.tw/articles/10187047)有提到 Logistic 迴歸雖然冠有**迴歸**的名稱，但實際上是一個二元分類（Binary classification）演算法嗎？Logistc 迴歸是我們建立的第一個分類器（Classifier）。分類（Classification）與迴歸（Regression）都屬於監督式學習（Supervised learning），一個預測類別目標變數，一個預測連續型目標變數。
+我們今天要繼續練習 **scikit-learn** 機器學習套件，還記得在[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day22.md)有提到 Logistic 迴歸雖然冠有**迴歸**的名稱，但實際上是一個二元分類（Binary classification）演算法嗎？Logistc 迴歸是我們建立的第一個分類器（Classifier）。分類（Classification）與迴歸（Regression）都屬於監督式學習（Supervised learning），一個預測類別目標變數，一個預測連續型目標變數。
 
 我們今天將建立兩個分類器，分別是決策樹分類器（Decision Tree Classifiers）與 k-Nearest Neighbors 分類器，這兩個演算法與 Logistic 迴歸最大的不同點是她們均為多元分類（Multiclass classification）演算法。
 
@@ -13,7 +13,7 @@
 決策樹分類器（Decision Tree Classifiers）是可以處理多元分類問題的演算法，我們最喜歡她的地方有兩點：
 
 - 可以同時處理連續型與類別型變數。
-- 不需要進行太多的資料預處理（Preprocessing），像是[昨天](http://ithelp.ithome.com.tw/articles/10187047)我們在建立 Logistic 迴歸前得將 `Pclass` 與 `Sex` 這兩個變數創造成 dummy variables，但是決策樹分類器不需要。
+- 不需要進行太多的資料預處理（Preprocessing），像是[昨天](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day22.md)我們在建立 Logistic 迴歸前得將 `Pclass` 與 `Sex` 這兩個變數創造成 dummy variables，但是決策樹分類器不需要。
 
 ```
 # ... 前略
@@ -29,7 +29,7 @@ encoded_Pclass = label_encoder.fit_transform(titanic_train["Pclass"])
 > Decision Trees Classifiers are a non-parametric supervised learning method used for classification, that are capable of performing multi-class classification on a dataset. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features.
 > [1.10. Decision Trees - scikit-learn 0.18.1 documentation](http://scikit-learn.org/stable/modules/tree.html)
 
-我們使用 **scikit-learn** 機器學習套件的其中一個玩具資料（Toy datasets）**鳶尾花資料**，利用花瓣（Petal）的長和寬跟花萼（Sepal）的長和寬來預測花的種類，藉此練習使用決策樹演算法建立一個三元分類器。如果你對玩具資料感到陌生，我推薦你參考 [[第 21 天] 機器學習 玩具資料與線性迴歸](http://ithelp.ithome.com.tw/articles/10186905)。
+我們使用 **scikit-learn** 機器學習套件的其中一個玩具資料（Toy datasets）**鳶尾花資料**，利用花瓣（Petal）的長和寬跟花萼（Sepal）的長和寬來預測花的種類，藉此練習使用決策樹演算法建立一個三元分類器。如果你對玩具資料感到陌生，我推薦你參考 [[第 21 天] 機器學習 玩具資料與線性迴歸](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day21.md)。
 
 ### Python
 

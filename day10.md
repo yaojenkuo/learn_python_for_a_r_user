@@ -8,7 +8,7 @@
 R 語言本質上是一個函數型程式語言，而 Python 是一個物件導向程式語言，這也是我認為 R 語言使用者在學習 Python 的時候會感到較為困惑的部分，尤其在面對類別（Class），屬性（Attribute）或者方法（Method）等陌生辭彙的時候，讓我們先用之前做過的練習切入。
 
 截至 2016-12-10 下午 1 時第 8 屆 iT 邦幫忙各組的鐵人分別是 51、8、18、14、6 與 64 人，我們用一個 data frame 來紀錄參賽的組別與鐵人數，如果你對 data frame 這個資料結構有疑惑，我推薦你閱讀 [[ 第 06 天] 資料結構（3）Data Frame
-](http://ithelp.ithome.com.tw/articles/10185182)。
+](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day06.md)。
 
 ```
 groups <- c("Modern Web", "DevOps", "Cloud", "Big Data", "Security", "自我挑戰組")

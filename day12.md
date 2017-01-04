@@ -6,7 +6,7 @@
 
 ## 基本變數類型的屬性或方法
 
-我們在 [[第 02 天] 基本變數類型](http://ithelp.ithome.com.tw/articles/10184855)討論過 Python 的基本變數類型（Built-in types），分為數值，文字與布林值三大類型，現在我們來瞭解這些變數類型可以應用的方法有哪些。
+我們在 [[第 02 天] 基本變數類型](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day02.md)討論過 Python 的基本變數類型（Built-in types），分為數值，文字與布林值三大類型，現在我們來瞭解這些變數類型可以應用的方法有哪些。
 
 ### 數值
 
@@ -126,7 +126,7 @@ print(bool.from_bytes(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01', byteorder = "
 
 ## 基本資料結構的屬性或方法
 
-我們在 [[第 04 天] 資料結構 List，Tuple 與 Dictionary](http://ithelp.ithome.com.tw/articles/10185010)討論過 Python 的基本資料結構（Built-in collections），分為 list，tuple 與 dict 三大類型，現在我們來瞭解這些資料結構可以應用的方法有哪些。
+我們在 [[第 04 天] 資料結構 List，Tuple 與 Dictionary](https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day04.md)討論過 Python 的基本資料結構（Built-in collections），分為 list，tuple 與 dict 三大類型，現在我們來瞭解這些資料結構可以應用的方法有哪些。
 
 ### list
 

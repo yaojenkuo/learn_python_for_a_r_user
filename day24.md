@@ -100,7 +100,7 @@ print(silhouette_avg)
 
 #### R 語言
 
-我們使用組內距離平方和 WSS（Within Cluster Sum of Squares），這個數值愈低表示績效愈好。
+我們使用 WSS（Within Cluster Sum of Squares）/BSS（Between Cluster Sum of Squares），這個數值愈低表示績效愈好。
 
 ```
 # 讀入鳶尾花資料

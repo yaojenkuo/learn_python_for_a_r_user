@@ -100,7 +100,7 @@ print(silhouette_avg)
 
 #### R 語言
 
-我們使用 WSS（Within Cluster Sum of Squares）/BSS（Between Cluster Sum of Squares），這個數值愈低表示績效愈好。
+我們使用 Total WSS（Total Within Cluster Sum of Squares）/Total SS（Total Sum of Squares），這個比例愈低表示績效愈好。
 
 ```
 # 讀入鳶尾花資料
@@ -108,11 +108,11 @@ iris_kmeans <- iris[, -5]
 
 # KMeans 演算法
 kmeans_fit <- kmeans(iris_kmeans, nstart=20, centers=3)
-ratio <- kmeans_fit$tot.withinss / kmeans_fit$betweenss
+ratio <- kmeans_fit$tot.withinss / kmeans_fit$totss
 ratio
 ```
 
-![day240501](https://storage.googleapis.com/2017_ithome_ironman/day240501.png)
+![day240502](https://storage.googleapis.com/2017_ithome_ironman/day240502.png)
 
 ### 如何選擇 k
 

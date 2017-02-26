@@ -271,7 +271,7 @@ def ironmen_stats(ironmen_list):
 # 呼叫自訂函數
 ironmen = [50, 8, 16, 12, 6, 62]
 max_ironmen, min_ironmen, ttl_groups, ttl_ironmen = ironmen_stats(ironmen)
-print("\n", 最多：", max_ironmen, "\n", "最少：", min_ironmen, "\n", "總組數：", ttl_groups, "\n", "總鐵人數：", ttl_ironmen)
+print("最多：", max_ironmen, "\n", "最少：", min_ironmen, "\n", "總組數：", ttl_groups, "\n", "總鐵人數：", ttl_ironmen)
 ```
 
 ![day0810](https://storage.googleapis.com/2017_ithome_ironman/day0810.png)
